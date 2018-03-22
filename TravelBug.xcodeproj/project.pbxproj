@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5ED2DC652063014C0042CF81 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2DC642063014C0042CF81 /* MoneyViewController.swift */; };
+		5ED2DC7F2063154C0042CF81 /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2DC7E2063154C0042CF81 /* CurrencyConverterViewController.swift */; };
+		5ED2DC8120631C2B0042CF81 /* FundTrackerEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2DC8020631C2B0042CF81 /* FundTrackerEntryViewController.swift */; };
+		5ED2DC8520631FF70042CF81 /* FundTrackerSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2DC8420631FF70042CF81 /* FundTrackerSummaryViewController.swift */; };
+		5ED2DC8920633CB40042CF81 /* CurrenciesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2DC8820633CB40042CF81 /* CurrenciesTableViewController.swift */; };
+		5ED2DC8B20633F910042CF81 /* CurrenciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2DC8A20633F910042CF81 /* CurrenciesTableViewCell.swift */; };
 		5EE339F4204592FF00189D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE339F3204592FF00189D4D /* AppDelegate.swift */; };
-		5EE339F6204592FF00189D4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE339F5204592FF00189D4D /* ViewController.swift */; };
 		5EE339F9204592FF00189D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE339F7204592FF00189D4D /* Main.storyboard */; };
 		5EE339FB204592FF00189D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE339FA204592FF00189D4D /* Assets.xcassets */; };
 		5EE339FE204592FF00189D4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE339FC204592FF00189D4D /* LaunchScreen.storyboard */; };
-		5EE33A09204592FF00189D4D /* TravelBugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE33A08204592FF00189D4D /* TravelBugTests.swift */; };
-		5EE33A14204592FF00189D4D /* TravelBugUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE33A13204592FF00189D4D /* TravelBugUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +37,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5ED2DC642063014C0042CF81 /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		5ED2DC7E2063154C0042CF81 /* CurrencyConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewController.swift; sourceTree = "<group>"; };
+		5ED2DC8020631C2B0042CF81 /* FundTrackerEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundTrackerEntryViewController.swift; sourceTree = "<group>"; };
+		5ED2DC8420631FF70042CF81 /* FundTrackerSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundTrackerSummaryViewController.swift; sourceTree = "<group>"; };
+		5ED2DC8820633CB40042CF81 /* CurrenciesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableViewController.swift; sourceTree = "<group>"; };
+		5ED2DC8A20633F910042CF81 /* CurrenciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableViewCell.swift; sourceTree = "<group>"; };
 		5EE339F0204592FF00189D4D /* TravelBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE339F3204592FF00189D4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EE339F5204592FF00189D4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5EE339F8204592FF00189D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EE339FA204592FF00189D4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EE339FD204592FF00189D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EE339FF204592FF00189D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE33A04204592FF00189D4D /* TravelBugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelBugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EE33A08204592FF00189D4D /* TravelBugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBugTests.swift; sourceTree = "<group>"; };
-		5EE33A0A204592FF00189D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE33A0F204592FF00189D4D /* TravelBugUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelBugUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EE33A13204592FF00189D4D /* TravelBugUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBugUITests.swift; sourceTree = "<group>"; };
-		5EE33A15204592FF00189D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5ED2DC63206300A80042CF81 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5ED2DC642063014C0042CF81 /* MoneyViewController.swift */,
+				5ED2DC7E2063154C0042CF81 /* CurrencyConverterViewController.swift */,
+				5ED2DC8020631C2B0042CF81 /* FundTrackerEntryViewController.swift */,
+				5ED2DC8420631FF70042CF81 /* FundTrackerSummaryViewController.swift */,
+				5ED2DC8820633CB40042CF81 /* CurrenciesTableViewController.swift */,
+				5ED2DC8A20633F910042CF81 /* CurrenciesTableViewCell.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		5EE339E7204592FF00189D4D = {
 			isa = PBXGroup;
 			children = (
 				5EE339F2204592FF00189D4D /* TravelBug */,
-				5EE33A07204592FF00189D4D /* TravelBugTests */,
-				5EE33A12204592FF00189D4D /* TravelBugUITests */,
 				5EE339F1204592FF00189D4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,32 +112,14 @@
 		5EE339F2204592FF00189D4D /* TravelBug */ = {
 			isa = PBXGroup;
 			children = (
+				5ED2DC63206300A80042CF81 /* View Controllers */,
 				5EE339F3204592FF00189D4D /* AppDelegate.swift */,
-				5EE339F5204592FF00189D4D /* ViewController.swift */,
 				5EE339F7204592FF00189D4D /* Main.storyboard */,
 				5EE339FA204592FF00189D4D /* Assets.xcassets */,
 				5EE339FC204592FF00189D4D /* LaunchScreen.storyboard */,
 				5EE339FF204592FF00189D4D /* Info.plist */,
 			);
 			path = TravelBug;
-			sourceTree = "<group>";
-		};
-		5EE33A07204592FF00189D4D /* TravelBugTests */ = {
-			isa = PBXGroup;
-			children = (
-				5EE33A08204592FF00189D4D /* TravelBugTests.swift */,
-				5EE33A0A204592FF00189D4D /* Info.plist */,
-			);
-			path = TravelBugTests;
-			sourceTree = "<group>";
-		};
-		5EE33A12204592FF00189D4D /* TravelBugUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5EE33A13204592FF00189D4D /* TravelBugUITests.swift */,
-				5EE33A15204592FF00189D4D /* Info.plist */,
-			);
-			path = TravelBugUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE339F6204592FF00189D4D /* ViewController.swift in Sources */,
+				5ED2DC8920633CB40042CF81 /* CurrenciesTableViewController.swift in Sources */,
+				5ED2DC8B20633F910042CF81 /* CurrenciesTableViewCell.swift in Sources */,
+				5ED2DC7F2063154C0042CF81 /* CurrencyConverterViewController.swift in Sources */,
+				5ED2DC8120631C2B0042CF81 /* FundTrackerEntryViewController.swift in Sources */,
 				5EE339F4204592FF00189D4D /* AppDelegate.swift in Sources */,
+				5ED2DC652063014C0042CF81 /* MoneyViewController.swift in Sources */,
+				5ED2DC8520631FF70042CF81 /* FundTrackerSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE33A09204592FF00189D4D /* TravelBugTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE33A14204592FF00189D4D /* TravelBugUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiannawoodson.TravelBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,7 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiannawoodson.TravelBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -25,27 +25,53 @@
                                     <navigationItem title="Money Manager" id="dSR-TH-7ul"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf2-rB-RzE">
-                                <rect key="frame" x="103" y="131" width="174" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf2-rB-RzE">
+                                <rect key="frame" x="82" y="234" width="210" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Currency Converter"/>
+                                <state key="normal" title="Currency Converter" image="currency conversion icon">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="currencyConverterButtonPressed:" destination="if7-Ze-tJl" eventType="touchUpInside" id="Ych-JG-xCl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QA-gB-SxQ">
-                                <rect key="frame" x="116" y="282" width="141" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QA-gB-SxQ">
+                                <rect key="frame" x="97" y="308" width="180" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add an Expense"/>
+                                <state key="normal" title="Add an Expense" image="plus sign">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="fundTrackerButtonPressed:" destination="if7-Ze-tJl" eventType="touchUpInside" id="09t-Vc-GZs"/>
+                                    <action selector="addExpenseButtonPressed:" destination="if7-Ze-tJl" eventType="touchUpInside" id="xqq-JS-Mzo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-MF-lx1">
-                                <rect key="frame" x="103" y="410" width="174" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-MF-lx1">
+                                <rect key="frame" x="77" y="470" width="253" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View Expenses Summary"/>
+                                <state key="normal" title="View Expenses Summary" image="calculator">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewExpensesSummaryButtonPressed:" destination="if7-Ze-tJl" eventType="touchUpInside" id="7K9-Jm-uco"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVp-E4-9Vl">
+                                <rect key="frame" x="97" y="388" width="183" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="List of Expenses" image="list icon">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="listOfExpensesButtonPressed:" destination="if7-Ze-tJl" eventType="touchUpInside" id="uuT-Mi-m3q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Money Tab! Choose any of the features below!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktC-ET-ETD">
+                                <rect key="frame" x="82" y="86" width="227" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="NVY-rU-mQT"/>
@@ -53,17 +79,113 @@
                     <navigationItem key="navigationItem" title="Money" id="I2q-nf-vOj"/>
                     <connections>
                         <segue destination="7Ar-vs-IeN" kind="show" identifier="Currency Converter" id="Imb-w9-YJ2"/>
-                        <segue destination="eDv-Fy-k0X" kind="show" identifier="Fund Tracker Entry" id="8tB-E4-lvC"/>
+                        <segue destination="eDv-Fy-k0X" kind="show" identifier="Add Expense" id="8tB-E4-lvC"/>
+                        <segue destination="Oj7-Bd-PMd" kind="show" identifier="Expenses List" id="Wii-2V-bUc"/>
+                        <segue destination="dfv-lk-9Gk" kind="show" identifier="Expenses Summary" id="6eI-K4-oAu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvr-Tk-I5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="540" y="62.518740629685162"/>
         </scene>
-        <!--Fund Tracker Entry View Controller-->
+        <!--Expense List-->
+        <scene sceneID="cti-5X-Mcp">
+            <objects>
+                <viewController id="Oj7-Bd-PMd" customClass="ExpenseListViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S5i-RY-r5x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LeftArrowBlack" translatesAutoresizingMaskIntoConstraints="NO" id="5Pk-HT-rA3">
+                                <rect key="frame" x="0.0" y="64" width="10" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RightArrowBlack" translatesAutoresizingMaskIntoConstraints="NO" id="fBJ-dd-u25">
+                                <rect key="frame" x="365" y="64" width="10" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bki-hn-nRs">
+                                <rect key="frame" x="10" y="65" width="355" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Oj7-Bd-PMd" id="h9g-Ub-pGb"/>
+                                </connections>
+                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mVR-jT-GWf">
+                                <rect key="frame" x="0.0" y="146" width="375" height="472"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExpenseCell" rowHeight="70" id="ahP-h1-B5J" customClass="ExpenseListTableViewCell" customModule="TravelBug" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ahP-h1-B5J" id="Z3E-86-f3t">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expense Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch0-9J-RRC">
+                                                    <rect key="frame" x="22" y="11" width="227" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRc-1l-655">
+                                                    <rect key="frame" x="271" y="10" width="61" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="expenseAmountLabel" destination="LRc-1l-655" id="G3H-3G-1ax"/>
+                                            <outlet property="expenseNameLabel" destination="ch0-9J-RRC" id="k1K-4n-OjQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Oj7-Bd-PMd" id="2Xh-ap-R2T"/>
+                                    <outlet property="delegate" destination="Oj7-Bd-PMd" id="8ox-LR-SVI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="J0q-Qp-8Vt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Expense List" id="oRW-e3-YgB"/>
+                    <connections>
+                        <outlet property="expensesTableView" destination="mVR-jT-GWf" id="zwN-Fk-5e0"/>
+                        <outlet property="leftArrowBlack" destination="5Pk-HT-rA3" id="z8y-BN-V3l"/>
+                        <outlet property="rightArrowBlack" destination="fBJ-dd-u25" id="iLH-gQ-TAM"/>
+                        <outlet property="scrollMenu" destination="Bki-hn-nRs" id="uCf-pr-fQk"/>
+                        <segue destination="Mav-fn-gkc" kind="show" identifier="Expense Info" id="AJ8-bv-KNI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Unv-ne-txV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392.8" y="373.76311844077964"/>
+        </scene>
+        <!--Expense Info View Controller-->
+        <scene sceneID="eZu-pn-rkG">
+            <objects>
+                <viewController id="Mav-fn-gkc" customClass="ExpenseInfoViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KVL-kZ-mO8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="l42-N2-Gea"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9V-p6-7I7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2276" y="374"/>
+        </scene>
+        <!--Add Expense View Controller-->
         <scene sceneID="7lC-dL-d4n">
             <objects>
-                <viewController id="eDv-Fy-k0X" customClass="FundTrackerEntryViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpenseEntry" id="eDv-Fy-k0X" customClass="AddExpenseViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i0c-jv-Xuz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,36 +272,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="an8-zh-ivL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="344.97751124437787"/>
+            <point key="canvasLocation" x="1388" y="-383"/>
         </scene>
-        <!--Fund Tracker Summary View Controller-->
+        <!--Expense Summary View Controller-->
         <scene sceneID="Z9B-IU-eOT">
             <objects>
-                <viewController id="dfv-lk-9Gk" customClass="FundTrackerSummaryViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpenseSummary" id="dfv-lk-9Gk" customClass="ExpenseSummaryViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b9p-Qx-AUe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ad-0s-SNr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Expense Summary" id="GDB-EC-EF6"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="BiH-Qx-k3l"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IY6-GT-c3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="1050"/>
+            <point key="canvasLocation" x="1393" y="1196"/>
         </scene>
         <!--Currency Converter View Controller-->
         <scene sceneID="4fE-Yk-FTw">
             <objects>
-                <viewController id="7Ar-vs-IeN" customClass="CurrencyConverterViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrencyConversion" id="7Ar-vs-IeN" customClass="CurrencyConverterViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZOd-mc-ue1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +394,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1392.8" y="-345.87706146926541"/>
+            <point key="canvasLocation" x="1393" y="-1074"/>
         </scene>
         <!--Available Currencies-->
         <scene sceneID="5JX-2a-gAs">
@@ -304,21 +417,21 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currency Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceC-vY-n8W">
-                                            <rect key="frame" x="88" y="0.0" width="271" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZM-r0-htt">
                                             <rect key="frame" x="88" y="43" width="271" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZM-r0-htt">
+                                            <rect key="frame" x="88" y="0.0" width="271" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currency Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTu-80-L5b">
-                                            <rect key="frame" x="88" y="22" width="271" height="21"/>
+                                            <rect key="frame" x="88" y="21" width="271" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -346,7 +459,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58W-KI-zi2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276" y="-346.77661169415296"/>
+            <point key="canvasLocation" x="2276" y="-1075"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OHA-Vd-351">
@@ -358,12 +471,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gHK-3V-O3w" kind="relationship" relationship="viewControllers" id="vEb-Ue-LkI"/>
+                        <segue destination="gHK-3V-O3w" kind="relationship" relationship="viewControllers" id="FQ3-u1-QlP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXg-zM-S7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1241" y="63"/>
+            <point key="canvasLocation" x="-1014" y="63"/>
         </scene>
         <!--Money-->
         <scene sceneID="KzX-rB-w4Q">
@@ -382,7 +495,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xmg-j8-QXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="63"/>
+            <point key="canvasLocation" x="-209" y="63"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LeftArrowBlack" width="10" height="20"/>
+        <image name="RightArrowBlack" width="10" height="20"/>
+        <image name="calculator" width="50" height="50"/>
+        <image name="currency conversion icon" width="50" height="50"/>
+        <image name="list icon" width="50" height="50"/>
+        <image name="plus sign" width="50" height="50"/>
+    </resources>
 </document>

@@ -20,7 +20,7 @@ class CurrencyConverterViewController: UIViewController {
     @IBOutlet var toCurrencyTextField: UITextField!
     
     //Instance variables
-    var currencies = [String()] //Holds names of all currencies
+    var countries = [String()] //Holds names of all currencies
     var pickerData: [String] = [String]() //Holder for categoryPicker options
     
     override func viewDidLoad() {
@@ -82,16 +82,16 @@ class CurrencyConverterViewController: UIViewController {
                     let currencyID = resultDict["currencyId"]
                     
                     //Put everything into one array
-                    let currencyData = [currencyName, countryName, countryID]
+                    let currencyData = [countryID, currencyName, currencyID]
                     
                     /*
                      Add the created array under the company name Key to the dictionary
                      dict_CurrencyID_CurrencyData held by the app delegate object.
                      */
-                    applicationDelegate.dict_CurrencyID_CurrencyData.setObject(currencyData, forKey: currencyID! as NSCopying)
+                    applicationDelegate.dict_CountryName_CountryData.setObject(currencyData, forKey: countryName! as NSCopying)
                 }
                 
-                currencies = applicationDelegate.dict_CurrencyID_CurrencyData.allKeys as! [String]
+                countries = applicationDelegate.dict_CountryName_CountryData.allKeys as! [String]
 
             }
             catch {
@@ -114,11 +114,11 @@ class CurrencyConverterViewController: UIViewController {
         let toInput = toCurrencyTextField.text!
         let fromInput = fromCurrencyTextField.text!
         
-        if (!checkValidCurrencyID(id: toInput)) {
+        if (!checkValidCurrencyID(givenCurrencyID: toInput)) {
             showAlertMessage(messageHeader: "Currency ID Error!", messageBody: "Sorry, \(toInput) is not a recognized currency. Please use the Avaialble Currencies link to view recognized currencies")
             return
         }
-        if (!checkValidCurrencyID(id: fromInput)) {
+        if (!checkValidCurrencyID(givenCurrencyID: fromInput)) {
             showAlertMessage(messageHeader: "Currency ID Error!", messageBody: "Sorry, \(fromInput) is not a recognized currency. Please use the Available Currencies link to view recognized currencies")
             return
         }
@@ -162,19 +162,17 @@ class CurrencyConverterViewController: UIViewController {
         let amountDouble = Double(amountTextField.text!)
         convertedAmount = amountDouble! * conversionFactor
         
-        //Get currency names
-        let cd = applicationDelegate.dict_CurrencyID_CurrencyData
-        let toCurrencyName = (cd[toInput]! as! Array)[0] as String
-        let fromCurrencyName = (cd[fromInput]! as! Array)[0] as String
-        
         //Update the label
-        conversionResultLabel.text = "\(amountTextField.text!) in \(fromCurrencyName) is \(convertedAmount) in \(toCurrencyName)"
+        conversionResultLabel.text = "\(amountTextField.text!) in \(toInput) is \(convertedAmount) in \(fromInput)"
     }
     
-    func checkValidCurrencyID(id: String) -> Bool {
+    func checkValidCurrencyID(givenCurrencyID: String) -> Bool {
         var matched = false
-        for c in currencies {
-            if (c == id) {
+        for c in countries {
+            let dict = applicationDelegate.dict_CountryName_CountryData
+            //[countryID, currencyName, currencyID]
+            let currencyID = (dict[c]! as! Array)[2] as String
+            if (currencyID == givenCurrencyID) {
                 matched = true
             }
         }

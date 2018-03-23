@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FundTrackerEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+class ExpenseTrackerEntryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     @IBOutlet var expenseTitleTextField: UITextField!
     @IBOutlet var expenseCategoryPicker: UIPickerView!
     @IBOutlet var expenseAmountTextField: UITextField!
@@ -20,7 +20,7 @@ class FundTrackerEntryViewController: UIViewController, UIPickerViewDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //SET UP CATEGORY PICKER
         expenseCategoryPicker.delegate = self
         expenseCategories = ["Food", "Travel", "Lodging", "Medical", "Entertainment", "Shopping", "Other"]
@@ -74,3 +74,4 @@ class FundTrackerEntryViewController: UIViewController, UIPickerViewDelegate, UI
         // Dispose of any resources that can be recreated.
     }
 }
+

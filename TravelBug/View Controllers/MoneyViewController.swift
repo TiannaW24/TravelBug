@@ -19,9 +19,17 @@ class MoneyViewController: UIViewController {
         performSegue(withIdentifier: "Currency Converter", sender: self)
     }
     
-    @IBAction func fundTrackerButtonPressed(_ sender: UIButton) {
-        //Transition to fund tracker
-        performSegue(withIdentifier: "Fund Tracker Entry", sender: self)
+
+    @IBAction func addExpenseButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "Add Expense", sender: self)
+    }
+    
+    @IBAction func listOfExpensesButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "Expenses List", sender: self)
+    }
+    
+    @IBAction func viewExpensesSummaryButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "Expenses Summary", sender: self)
     }
     
     override func didReceiveMemoryWarning() {

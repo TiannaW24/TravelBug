@@ -1,14 +1,14 @@
 //
-//  FundTrackerSummaryViewController.swift
+//  ExpenseSummaryViewController.swift
 //  TravelBug
 //
-//  Created by Woodson, Tianna A (CTR) on 3/21/18.
+//  Created by Woodson, Tianna A (CTR) on 3/22/18.
 //  Copyright © 2018 Tianna Woodson. All rights reserved.
 //
 
 import UIKit
 
-class FundTrackerSummaryViewController: UIViewController {
+class ExpenseSummaryViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -21,6 +21,7 @@ class ExpenseListViewController: UIViewController, UIScrollViewDelegate, UITable
     
     //Instance variables
     var expenseNames = [String()]
+    var expenseToBePassed = [String()]
     var expenseCategories = ["All", "Food", "Travel", "Lodging", "Medical", "Entertainment", "Shopping", "Other"]
     let kScrollMenuHeight: CGFloat = 64.0
     var selectedExpenseType = ""
@@ -277,21 +278,30 @@ class ExpenseListViewController: UIViewController, UIScrollViewDelegate, UITable
         // Convert the array to be a Swift array
         let selectedExpense = expensesFromSelectedType[rowNumber]
         
-        /*
-         Create a UIAlertController object; dress it up with title, message, and preferred style;
-         and store its object reference into local constant alertController
-         */
-        let alertController = UIAlertController(title: selectedExpense, message: selectedExpenseType, preferredStyle: UIAlertControllerStyle.alert)
+        //Get the rest of the data from the selected expense
+        let dict = applicationDelegate.dict_ExpenseName_ExpenseData as! Dictionary<String, Array<String>>
+        var expenseArray = dict[selectedExpense]
+        expenseArray!.append(selectedExpense)
         
-        // Create a UIAlertAction object and add it to the alert controller
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
-        // Present the alert controller by calling the presentViewController method
-        present(alertController, animated: true, completion: nil)
-        
+        expenseToBePassed = expenseArray!
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "Expense Info", sender: self)
     }
     
+    //Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        
+        if segue.identifier == "Expense Info" {
+            
+            // Obtain the object reference of the destination view controller
+            let expenseInfoViewController: ExpenseInfoViewController = segue.destination as! ExpenseInfoViewController
+            
+            // Pass the data object to the downstream view controller object
+            expenseInfoViewController.expensePassed = expenseToBePassed
+        }
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

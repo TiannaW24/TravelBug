@@ -8,28 +8,39 @@
 
 import UIKit
 
-class ExpenseInfoViewController: UIPageViewController {
+class ExpenseInfoViewController: UIViewController {
 
+    //UI Elements to be set
+    @IBOutlet var expenseNameLabel: UILabel!
+    @IBOutlet var expenseCategoryLabel: UILabel!
+    @IBOutlet var expenseBudgetedLabel: UILabel!
+    @IBOutlet var expenseAmountLabel: UILabel!
+    @IBOutlet var expenseBudgetedImageView: UIImageView!
+    
+    //Instance variables
+    // [expenseAmount, expenseCategory, expenseBudgeted, expenseName]
+    var expensePassed = [String()]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Set the UI elements according to the data passed in
+        expenseNameLabel.text! = expensePassed[3]
+        expenseCategoryLabel.text! = expensePassed[1]
+        expenseAmountLabel.text! = expensePassed[0]
+        
+        if (expensePassed[2] == "Yes") {
+            expenseBudgetedLabel.text! = "You budgeted for this expense"
+            expenseBudgetedImageView.image = UIImage(named: "CheckMark")
+        }
+        else {
+            expenseBudgetedLabel.text! = "You did not budget for this expense"
+            expenseBudgetedImageView.image = UIImage(named: "XMark")
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

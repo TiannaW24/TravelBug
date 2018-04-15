@@ -24,6 +24,10 @@
 		B775A6A6207EBEF20091B93C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B775A6A5207EBEF20091B93C /* WebKit.framework */; };
 		B775A6A8207EBEF80091B93C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B775A6A7207EBEF80091B93C /* MapKit.framework */; };
 		B775A6AA207EBEFD0091B93C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B775A6A9207EBEFD0091B93C /* CoreLocation.framework */; };
+		B7DD255D2083EF0400B1FB93 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD255C2083EF0400B1FB93 /* CurrentLocationViewController.swift */; };
+		B7DD255F2083EF2000B1FB93 /* CurrentLocationOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD255E2083EF2000B1FB93 /* CurrentLocationOnMapViewController.swift */; };
+		B7DD25612083FAC800B1FB93 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD25602083FAC800B1FB93 /* DirectionsViewController.swift */; };
+		B7DD25632083FAD100B1FB93 /* DirectionsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD25622083FAD100B1FB93 /* DirectionsMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		B775A6A5207EBEF20091B93C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B775A6A7207EBEF80091B93C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B775A6A9207EBEFD0091B93C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B7DD255C2083EF0400B1FB93 /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
+		B7DD255E2083EF2000B1FB93 /* CurrentLocationOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationOnMapViewController.swift; sourceTree = "<group>"; };
+		B7DD25602083FAC800B1FB93 /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
+		B7DD25622083FAD100B1FB93 /* DirectionsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 				5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */,
 				5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */,
 				5EA3E30520640FC800D90946 /* ExpenseSummaryViewController.swift */,
+				B7DD255B2083EE2F00B1FB93 /* Maps */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -152,6 +161,17 @@
 				B775A6A5207EBEF20091B93C /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7DD255B2083EE2F00B1FB93 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				B7DD255C2083EF0400B1FB93 /* CurrentLocationViewController.swift */,
+				B7DD255E2083EF2000B1FB93 /* CurrentLocationOnMapViewController.swift */,
+				B7DD25602083FAC800B1FB93 /* DirectionsViewController.swift */,
+				B7DD25622083FAD100B1FB93 /* DirectionsMapViewController.swift */,
+			);
+			path = Maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,12 +312,16 @@
 				5EA3E30620640FC800D90946 /* ExpenseSummaryViewController.swift in Sources */,
 				5ED2DC8920633CB40042CF81 /* CurrenciesTableViewController.swift in Sources */,
 				5ED2DC8B20633F910042CF81 /* CurrenciesTableViewCell.swift in Sources */,
+				B7DD255D2083EF0400B1FB93 /* CurrentLocationViewController.swift in Sources */,
 				5EA3E2FE20640DF100D90946 /* ExpenseInfoViewController.swift in Sources */,
 				5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */,
 				5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */,
 				5EDDC7092064412F004C0DAB /* ExpenseListTableViewCell.swift in Sources */,
 				5ED2DC7F2063154C0042CF81 /* CurrencyConverterViewController.swift in Sources */,
+				B7DD25632083FAD100B1FB93 /* DirectionsMapViewController.swift in Sources */,
+				B7DD255F2083EF2000B1FB93 /* CurrentLocationOnMapViewController.swift in Sources */,
 				5EE339F4204592FF00189D4D /* AppDelegate.swift in Sources */,
+				B7DD25612083FAC800B1FB93 /* DirectionsViewController.swift in Sources */,
 				5ED2DC652063014C0042CF81 /* MoneyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

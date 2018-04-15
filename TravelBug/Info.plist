@@ -42,7 +42,13 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>TravelBug requires monitoring your location only when using the App!</string>
+	<string>TravelBug requires monitoring your location!</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>TravelBug requires monitoring your location!</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>TravelBug requires monitoring your location!</string>
+	<key>NSLocationUsageDescription</key>
+	<string>TravelBug requires monitoring your location!</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

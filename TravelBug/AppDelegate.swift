@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var dict_CountryName_CountryData: NSMutableDictionary = NSMutableDictionary()
     var dict_ExpenseName_ExpenseData: NSMutableDictionary = NSMutableDictionary()
     
+    
     var window: UIWindow?
 
     /*

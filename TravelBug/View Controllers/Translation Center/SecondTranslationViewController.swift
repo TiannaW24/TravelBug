@@ -10,9 +10,14 @@ import UIKit
 
 class SecondTranslationViewController: UIViewController {
 
+    //Text View Variable
+    @IBOutlet var translateFromTextView: UITextView!
+    @IBOutlet var translateToTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        translateFromTextView.text = InitialTranslationViewController.setLang.primaryLanguage
+        translateToTextView.text = InitialTranslationViewController.setLang.translateToo
         // Do any additional setup after loading the view.
     }
 

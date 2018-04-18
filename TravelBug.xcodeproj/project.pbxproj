@@ -14,6 +14,7 @@
 		54235DEA20751F6C0037615B /* SecondTranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54235DE820751F6C0037615B /* SecondTranslationViewController.xib */; };
 		54235DED207544FC0037615B /* InitialTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54235DEB207544FC0037615B /* InitialTranslationViewController.swift */; };
 		54235DEE207544FC0037615B /* InitialTranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54235DEC207544FC0037615B /* InitialTranslationViewController.xib */; };
+		54235E172086ED4C0037615B /* presetSayings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54235E162086ED4C0037615B /* presetSayings.plist */; };
 		5EA3E2FE20640DF100D90946 /* ExpenseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */; };
 		5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */; };
 		5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */; };
@@ -55,6 +56,7 @@
 		54235DE820751F6C0037615B /* SecondTranslationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondTranslationViewController.xib; sourceTree = "<group>"; };
 		54235DEB207544FC0037615B /* InitialTranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTranslationViewController.swift; sourceTree = "<group>"; };
 		54235DEC207544FC0037615B /* InitialTranslationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialTranslationViewController.xib; sourceTree = "<group>"; };
+		54235E162086ED4C0037615B /* presetSayings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = presetSayings.plist; sourceTree = "<group>"; };
 		5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseInfoViewController.swift; sourceTree = "<group>"; };
 		5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				54235DE820751F6C0037615B /* SecondTranslationViewController.xib */,
 				54235DEB207544FC0037615B /* InitialTranslationViewController.swift */,
 				54235DEC207544FC0037615B /* InitialTranslationViewController.xib */,
+				54235E162086ED4C0037615B /* presetSayings.plist */,
 			);
 			path = "Translation Center";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				54235DE620751F5E0037615B /* FirstTranslationViewController.xib in Resources */,
 				5EE339FB204592FF00189D4D /* Assets.xcassets in Resources */,
 				5EE339F9204592FF00189D4D /* Main.storyboard in Resources */,
+				54235E172086ED4C0037615B /* presetSayings.plist in Resources */,
 				5EC4D998206432BB0013AF16 /* Expenses.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

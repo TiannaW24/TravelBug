@@ -15,14 +15,19 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
     
     @IBOutlet var outputLanguagePickerView: UIPickerView!
     
-    //Struct to contain language settings
-    struct setLang {
-        static var primaryLanguage = ""
-        static var translateToo = ""
+    struct languageStruct {
+        var key = ""
+        var lang = ""
     }
     
+    // Obtain the object reference to the App Delegate object
+    let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var primaryLanguage: String = ""
+    var outputLanguage: String = ""
+    
     var dict_languageKeys_languageData: NSDictionary = NSDictionary()
-    var languages: [String] = []
+    var languages = [languageStruct]()
     
     let apiKey = "trnsl.1.1.20180418T190140Z.d89b8f4ad4a5d910.32872d8ea1451edc7d7df8e6a7153eab3b872f73"
     let apiRequest = "https://translate.yandex.net/api/v1.5/tr.json/getLangs?key=trnsl.1.1.20180418T190140Z.d89b8f4ad4a5d910.32872d8ea1451edc7d7df8e6a7153eab3b872f73&ui=en"
@@ -36,8 +41,6 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
         primaryLangPickerView.delegate = self
         outputLanguagePickerView.dataSource = self
         outputLanguagePickerView.delegate = self
-        
-        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -49,15 +52,16 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return languages[row]
+        return languages[row].lang
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
-            setLang.primaryLanguage = languages[row]
+            applicationDelegate.primaryLanguage = languages[row].key
         }
         else if pickerView.tag == 1 {
-            setLang.translateToo = languages[row]
+            applicationDelegate.outputLanguage = languages[row].key
         }
     }
 
@@ -94,11 +98,11 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
                 
                 let languagesData = jsonDataDictionary!["langs"] as! NSDictionary
                 dict_languageKeys_languageData = languagesData
-                var keys = languagesData.allKeys as! [String]
-                keys = keys.sorted { $0 < $1 }
+                let keys = languagesData.allKeys as! [String]
                 for key in keys {
-                    languages.append(languagesData[key] as! String)
+                    languages.append(languageStruct(key: key, lang: languagesData[key] as! String))
                 }
+                languages = languages.sorted {$0.lang < $1.lang}
                 
             } catch let error as NSError {
                 
@@ -111,7 +115,6 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
         }
         return
     }
-    
 
     /*
      -----------------------------

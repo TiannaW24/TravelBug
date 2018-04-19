@@ -12,6 +12,9 @@ class TranslationCenterViewController: UIViewController {
 
     @IBOutlet var translationMainScrollView: UIScrollView!
     
+    var primaryLang: String = ""
+    var newLang: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

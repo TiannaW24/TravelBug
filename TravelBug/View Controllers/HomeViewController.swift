@@ -11,15 +11,21 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet var welcomeLabel: UILabel!
+    @IBOutlet var insLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Welcome and instruction label
         welcomeLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 50)
         welcomeLabel.textColor = UIColor.white
+        insLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 30)
+        insLabel.textColor = UIColor.white
         
+        //Tab Bar
         self.tabBarController?.tabBar.barTintColor = UIColor.black
 
+        //Background
         let bgImage = UIImage(named: "blue_purple_background")
         let bgImageView = UIImageView()
         bgImageView.frame = self.view.frame

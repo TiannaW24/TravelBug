@@ -469,11 +469,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Expense Summary" id="QhD-KI-8rv"/>
                     <connections>
+                        <outlet property="contentView" destination="dcx-7L-bTC" id="4rp-dw-T2K"/>
                         <outlet property="entertainmentLabel" destination="UVp-jH-pwQ" id="AS3-sY-aBK"/>
                         <outlet property="foodLabel" destination="Yxf-fL-u7G" id="IfC-rR-2Kh"/>
                         <outlet property="lodgingLabel" destination="PG1-dr-aVd" id="jnQ-rx-d0t"/>
                         <outlet property="medicalLabel" destination="8OF-QY-NMY" id="ZwO-8V-jLF"/>
                         <outlet property="otherLabel" destination="4OZ-dM-cNV" id="iDX-IF-u6I"/>
+                        <outlet property="scrollView" destination="uXx-DZ-Mop" id="uAr-hM-DD5"/>
                         <outlet property="shoppingLabel" destination="bYL-io-fNA" id="oLr-xG-qHE"/>
                         <outlet property="totalLabel" destination="WIG-qs-EKZ" id="wzW-Yc-cLf"/>
                         <outlet property="travelLabel" destination="ZfN-nk-eUg" id="xxQ-fR-KoO"/>
@@ -498,16 +500,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOc-pE-CuL">
-                                <rect key="frame" x="133" y="477" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Convert"/>
-                                <connections>
-                                    <action selector="convertButtonPressed:" destination="7Ar-vs-IeN" eventType="touchUpInside" id="RKb-Fu-Oqa"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter the currency symbol you would like to convert to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNt-S8-9yP">
-                                <rect key="frame" x="32" y="191" width="263" height="55"/>
+                                <rect key="frame" x="32" y="181" width="263" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -521,14 +515,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIO-3Z-hOu">
-                                <rect key="frame" x="42" y="269" width="237" height="30"/>
+                                <rect key="frame" x="42" y="245" width="237" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isx-1W-GoJ">
-                                <rect key="frame" x="50" y="317" width="229" height="30"/>
+                                <rect key="frame" x="50" y="286" width="229" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="See Available Currencies"/>
                                 <connections>
@@ -536,26 +530,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Conversion Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vE-vQ-Zdx">
-                                <rect key="frame" x="25" y="530" width="302" height="63"/>
+                                <rect key="frame" x="9" y="447" width="302" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter currency amount:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJE-KN-443">
-                                <rect key="frame" x="63" y="372" width="208" height="21"/>
+                                <rect key="frame" x="63" y="331" width="208" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsV-wl-PlJ">
-                                <rect key="frame" x="49" y="415" width="237" height="30"/>
+                                <rect key="frame" x="49" y="369" width="237" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOc-pE-CuL">
+                                <rect key="frame" x="126" y="423" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertButtonPressed:" destination="7Ar-vs-IeN" eventType="touchUpInside" id="RKb-Fu-Oqa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="QGD-aY-z4r"/>
@@ -963,6 +965,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check out some of our features below!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0x-fj-WaV">
+                                <rect key="frame" x="58" y="264" width="212" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -973,6 +982,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="TabBarIcon-Home" id="Ob2-cL-krS"/>
                     <connections>
+                        <outlet property="insLabel" destination="J0x-fj-WaV" id="2zw-eW-z7O"/>
                         <outlet property="welcomeLabel" destination="zBP-eR-87E" id="tQn-dK-hd0"/>
                     </connections>
                 </viewController>

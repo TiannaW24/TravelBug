@@ -37,6 +37,18 @@ class ExpenseInfoViewController: UIViewController {
             expenseBudgetedLabel.text! = "You did not budget for this expense"
             expenseBudgetedImageView.image = UIImage(named: "XMark")
         }
+        
+        //Tab Bar
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = self.view.frame
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        self.view.addSubview(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
     }
     
     override func didReceiveMemoryWarning() {

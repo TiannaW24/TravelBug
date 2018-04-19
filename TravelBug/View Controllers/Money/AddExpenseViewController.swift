@@ -28,6 +28,18 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
         //SET UP CATEGORY PICKER
         expenseCategoryPicker.delegate = self
         expenseCategories = ["Food", "Travel", "Lodging", "Medical", "Entertainment", "Shopping", "Other"]
+        
+        //Tab Bar
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = self.view.frame
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        self.view.addSubview(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
     }
     
     //categoryPicker Methods

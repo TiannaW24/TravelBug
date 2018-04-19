@@ -1073,11 +1073,8 @@
         <image name="RightArrowBlack" width="10" height="20"/>
         <image name="TabBarIcon-CurrentLocation" width="30" height="30"/>
         <image name="TabBarIcon-DollarSign" width="30" height="30"/>
-<<<<<<< HEAD
         <image name="TabBarIcon-Home" width="30" height="30"/>
-=======
         <image name="TabBarIcon-Translation" width="30" height="30"/>
->>>>>>> f2ea96ff3fe355aab7974e61bde5fd54b16bcede
         <image name="calculator" width="50" height="50"/>
         <image name="currency conversion icon" width="50" height="50"/>
         <image name="list icon" width="50" height="50"/>

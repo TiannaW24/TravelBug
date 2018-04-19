@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
+
 		5E0F5E032088292A0056B159 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F5E022088292A0056B159 /* HomeViewController.swift */; };
-=======
 		5444710B20883F3C0065BF8B /* TranslationCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444710320883F3B0065BF8B /* TranslationCenterViewController.swift */; };
 		5444710C20883F3C0065BF8B /* SecondTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444710420883F3B0065BF8B /* SecondTranslationViewController.swift */; };
 		5444710D20883F3C0065BF8B /* presetSayings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5444710520883F3C0065BF8B /* presetSayings.plist */; };
@@ -18,7 +17,6 @@
 		5444711020883F3C0065BF8B /* InitialTranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5444710820883F3C0065BF8B /* InitialTranslationViewController.xib */; };
 		5444711120883F3C0065BF8B /* InitialTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444710920883F3C0065BF8B /* InitialTranslationViewController.swift */; };
 		5444711220883F3C0065BF8B /* SecondTranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5444710A20883F3C0065BF8B /* SecondTranslationViewController.xib */; };
->>>>>>> f2ea96ff3fe355aab7974e61bde5fd54b16bcede
 		5EA3E2FE20640DF100D90946 /* ExpenseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */; };
 		5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */; };
 		5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */; };
@@ -60,9 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		5E0F5E022088292A0056B159 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-=======
 		5444710320883F3B0065BF8B /* TranslationCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationCenterViewController.swift; sourceTree = "<group>"; };
 		5444710420883F3B0065BF8B /* SecondTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTranslationViewController.swift; sourceTree = "<group>"; };
 		5444710520883F3C0065BF8B /* presetSayings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = presetSayings.plist; sourceTree = "<group>"; };
@@ -71,7 +67,6 @@
 		5444710820883F3C0065BF8B /* InitialTranslationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitialTranslationViewController.xib; sourceTree = "<group>"; };
 		5444710920883F3C0065BF8B /* InitialTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialTranslationViewController.swift; sourceTree = "<group>"; };
 		5444710A20883F3C0065BF8B /* SecondTranslationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondTranslationViewController.xib; sourceTree = "<group>"; };
->>>>>>> f2ea96ff3fe355aab7974e61bde5fd54b16bcede
 		5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseInfoViewController.swift; sourceTree = "<group>"; };
 		5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewController.swift; sourceTree = "<group>"; };

@@ -663,6 +663,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.72999363126727412" green="0.93135355402093545" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="RLD-GZ-PaT" kind="relationship" relationship="viewControllers" id="hLc-8G-PwZ"/>
@@ -939,30 +947,33 @@
         <!--Home-->
         <scene sceneID="Aiz-kA-adP">
             <objects>
-                <viewController id="RLD-GZ-PaT" sceneMemberID="viewController">
+                <viewController id="RLD-GZ-PaT" customClass="HomeViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Tc-6C-XYr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home VC, are we going to have a home screen?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBP-eR-87E">
-                                <rect key="frame" x="16" y="114" width="288" height="288"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to TravelBug" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBP-eR-87E">
+                                <rect key="frame" x="16" y="0.0" width="288" height="288"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="aTJ-bx-okh"/>
                                     <constraint firstAttribute="height" constant="288" id="zhW-ph-xMV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zBP-eR-87E" firstAttribute="top" secondItem="aS6-GK-FXo" secondAttribute="top" constant="94" id="Fwe-U6-E4v"/>
+                            <constraint firstItem="zBP-eR-87E" firstAttribute="top" secondItem="aS6-GK-FXo" secondAttribute="top" constant="-20" id="Fwe-U6-E4v"/>
                             <constraint firstItem="zBP-eR-87E" firstAttribute="centerX" secondItem="4Tc-6C-XYr" secondAttribute="centerX" id="w84-Yf-dPN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aS6-GK-FXo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Ob2-cL-krS"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="TabBarIcon-Home" id="Ob2-cL-krS"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="zBP-eR-87E" id="tQn-dK-hd0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lqa-l1-hc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1012,6 +1023,7 @@
         <image name="RightArrowBlack" width="10" height="20"/>
         <image name="TabBarIcon-CurrentLocation" width="30" height="30"/>
         <image name="TabBarIcon-DollarSign" width="30" height="30"/>
+        <image name="TabBarIcon-Home" width="30" height="30"/>
         <image name="calculator" width="50" height="50"/>
         <image name="currency conversion icon" width="50" height="50"/>
         <image name="list icon" width="50" height="50"/>

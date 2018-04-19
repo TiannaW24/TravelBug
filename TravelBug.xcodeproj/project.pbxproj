@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0F5E032088292A0056B159 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F5E022088292A0056B159 /* HomeViewController.swift */; };
 		5EA3E2FE20640DF100D90946 /* ExpenseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */; };
 		5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */; };
 		5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E0F5E022088292A0056B159 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseInfoViewController.swift; sourceTree = "<group>"; };
 		5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				5E0F5E012088211F0056B159 /* Money */,
 				B7DD255B2083EE2F00B1FB93 /* Maps */,
+				5E0F5E022088292A0056B159 /* HomeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				5ED2DC8B20633F910042CF81 /* CurrenciesTableViewCell.swift in Sources */,
 				B7DD255D2083EF0400B1FB93 /* CurrentLocationViewController.swift in Sources */,
 				5EA3E2FE20640DF100D90946 /* ExpenseInfoViewController.swift in Sources */,
+				5E0F5E032088292A0056B159 /* HomeViewController.swift in Sources */,
 				5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */,
 				5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */,
 				5EDDC7092064412F004C0DAB /* ExpenseListTableViewCell.swift in Sources */,

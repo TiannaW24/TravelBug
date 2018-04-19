@@ -12,6 +12,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstTranslationViewController" customModule="TravelBug" customModuleProvider="target">
             <connections>
+                <outlet property="busImageView" destination="DGa-0R-CMv" id="qQ4-2z-sy8"/>
+                <outlet property="doctorImageView" destination="Hm1-V3-U2N" id="9Ae-vY-yRn"/>
+                <outlet property="foodImageView" destination="aSG-ob-vgB" id="VE8-lb-h26"/>
+                <outlet property="moneyImageView" destination="9yy-ar-Th5" id="LAV-wE-seL"/>
+                <outlet property="phraseOneLabel" destination="bYC-Hx-55z" id="Op8-z1-jX0"/>
+                <outlet property="phraseOneTranslation" destination="dbS-xy-xxQ" id="ZjN-Ai-Xh0"/>
+                <outlet property="phraseThreeLabel" destination="wSb-gV-kvy" id="PC0-PV-XH4"/>
+                <outlet property="phraseThreeTranslation" destination="oyi-gO-Na7" id="f2U-xm-IbT"/>
+                <outlet property="phraseTwoLabel" destination="UrU-EA-A1J" id="UQb-bq-KX0"/>
+                <outlet property="phraseTwoTranslation" destination="HnA-Fp-owf" id="M5Y-CW-M2f"/>
+                <outlet property="policeImageView" destination="Z7b-yN-zdM" id="xiz-99-qBm"/>
+                <outlet property="trainImageView" destination="2DL-Dz-f96" id="AOF-fF-J9e"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,42 +32,42 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="policemanTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7b-yN-zdM">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="policemanTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7b-yN-zdM">
                     <rect key="frame" x="11" y="206" width="75" height="75"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="75" id="MP5-Sd-Hd5"/>
                         <constraint firstAttribute="width" constant="75" id="ye7-um-cjc"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctorTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-V3-U2N">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctorTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-V3-U2N">
                     <rect key="frame" x="235" y="206" width="75" height="75"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="75" id="bjg-2n-DbS"/>
                         <constraint firstAttribute="width" constant="75" id="gtX-kw-9tW"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="aSG-ob-vgB">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="aSG-ob-vgB">
                     <rect key="frame" x="122.5" y="90" width="75" height="75"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="75" id="RIa-S3-kdY"/>
                         <constraint firstAttribute="width" constant="75" id="THT-Vz-V51"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trainTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="2DL-Dz-f96">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trainTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="2DL-Dz-f96">
                     <rect key="frame" x="235" y="105" width="75" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="XxY-Xo-3Ul"/>
                         <constraint firstAttribute="height" constant="75" id="g2N-W9-NPK"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="DGa-0R-CMv">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="DGa-0R-CMv">
                     <rect key="frame" x="11" y="105" width="75" height="75"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="75" id="2vm-dU-XN9"/>
                         <constraint firstAttribute="width" constant="75" id="ay1-bX-g1U"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="atmTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-ar-Th5">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="atmTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-ar-Th5">
                     <rect key="frame" x="122.5" y="221" width="75" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="Omr-EB-5H8"/>

@@ -8,7 +8,7 @@
 		<string>Where is the nearest hospital?</string>
 		<string>Can you call me a doctor?</string>
 	</array>
-	<key>Bank</key>
+	<key>Money</key>
 	<array>
 		<string>Bank</string>
 		<string>Where is the nearest Bank?</string>
@@ -30,7 +30,7 @@
 	<array>
 		<string>Food</string>
 		<string>Where can I buy food nearby?</string>
-		<string>Any good restauraunts nearby?</string>
+		<string>Any good restaurants nearby?</string>
 	</array>
 	<key>Bus</key>
 	<array>

@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel.font = UIFont (name: "HelveticaNeue-UltraLight", size: 50)
+        welcomeLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 50)
         welcomeLabel.textColor = UIColor.white
         
         self.tabBarController?.tabBar.barTintColor = UIColor.black

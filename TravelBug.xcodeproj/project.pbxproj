@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5444710B20883F3C0065BF8B /* TranslationCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444710320883F3B0065BF8B /* TranslationCenterViewController.swift */; };
+		5444710C20883F3C0065BF8B /* SecondTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444710420883F3B0065BF8B /* SecondTranslationViewController.swift */; };
+		5444710D20883F3C0065BF8B /* presetSayings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5444710520883F3C0065BF8B /* presetSayings.plist */; };
+		5444710E20883F3C0065BF8B /* FirstTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444710620883F3C0065BF8B /* FirstTranslationViewController.swift */; };
+		5444710F20883F3C0065BF8B /* FirstTranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5444710720883F3C0065BF8B /* FirstTranslationViewController.xib */; };
+		5444711020883F3C0065BF8B /* InitialTranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5444710820883F3C0065BF8B /* InitialTranslationViewController.xib */; };
+		5444711120883F3C0065BF8B /* InitialTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444710920883F3C0065BF8B /* InitialTranslationViewController.swift */; };
+		5444711220883F3C0065BF8B /* SecondTranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5444710A20883F3C0065BF8B /* SecondTranslationViewController.xib */; };
 		5EA3E2FE20640DF100D90946 /* ExpenseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */; };
 		5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */; };
 		5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */; };
@@ -48,6 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5444710320883F3B0065BF8B /* TranslationCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationCenterViewController.swift; sourceTree = "<group>"; };
+		5444710420883F3B0065BF8B /* SecondTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTranslationViewController.swift; sourceTree = "<group>"; };
+		5444710520883F3C0065BF8B /* presetSayings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = presetSayings.plist; sourceTree = "<group>"; };
+		5444710620883F3C0065BF8B /* FirstTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTranslationViewController.swift; sourceTree = "<group>"; };
+		5444710720883F3C0065BF8B /* FirstTranslationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTranslationViewController.xib; sourceTree = "<group>"; };
+		5444710820883F3C0065BF8B /* InitialTranslationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitialTranslationViewController.xib; sourceTree = "<group>"; };
+		5444710920883F3C0065BF8B /* InitialTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialTranslationViewController.swift; sourceTree = "<group>"; };
+		5444710A20883F3C0065BF8B /* SecondTranslationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondTranslationViewController.xib; sourceTree = "<group>"; };
 		5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseInfoViewController.swift; sourceTree = "<group>"; };
 		5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +119,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5444710220883F160065BF8B /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				5444710620883F3C0065BF8B /* FirstTranslationViewController.swift */,
+				5444710720883F3C0065BF8B /* FirstTranslationViewController.xib */,
+				5444710920883F3C0065BF8B /* InitialTranslationViewController.swift */,
+				5444710820883F3C0065BF8B /* InitialTranslationViewController.xib */,
+				5444710520883F3C0065BF8B /* presetSayings.plist */,
+				5444710420883F3B0065BF8B /* SecondTranslationViewController.swift */,
+				5444710A20883F3C0065BF8B /* SecondTranslationViewController.xib */,
+				5444710320883F3B0065BF8B /* TranslationCenterViewController.swift */,
+			);
+			path = Translation;
+			sourceTree = "<group>";
+		};
 		5E0F5E012088211F0056B159 /* Money */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +153,7 @@
 		5ED2DC63206300A80042CF81 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5444710220883F160065BF8B /* Translation */,
 				5E0F5E012088211F0056B159 /* Money */,
 				B7DD255B2083EE2F00B1FB93 /* Maps */,
 			);
@@ -289,9 +321,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5444711020883F3C0065BF8B /* InitialTranslationViewController.xib in Resources */,
 				5EE339FE204592FF00189D4D /* LaunchScreen.storyboard in Resources */,
 				5EE339FB204592FF00189D4D /* Assets.xcassets in Resources */,
 				5EE339F9204592FF00189D4D /* Main.storyboard in Resources */,
+				5444710F20883F3C0065BF8B /* FirstTranslationViewController.xib in Resources */,
+				5444710D20883F3C0065BF8B /* presetSayings.plist in Resources */,
+				5444711220883F3C0065BF8B /* SecondTranslationViewController.xib in Resources */,
 				5EC4D998206432BB0013AF16 /* Expenses.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,14 +355,18 @@
 			files = (
 				5EA3E30620640FC800D90946 /* ExpenseSummaryViewController.swift in Sources */,
 				5ED2DC8920633CB40042CF81 /* CurrenciesTableViewController.swift in Sources */,
+				5444710B20883F3C0065BF8B /* TranslationCenterViewController.swift in Sources */,
 				5ED2DC8B20633F910042CF81 /* CurrenciesTableViewCell.swift in Sources */,
 				B7DD255D2083EF0400B1FB93 /* CurrentLocationViewController.swift in Sources */,
 				5EA3E2FE20640DF100D90946 /* ExpenseInfoViewController.swift in Sources */,
 				5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */,
+				5444711120883F3C0065BF8B /* InitialTranslationViewController.swift in Sources */,
 				5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */,
 				5EDDC7092064412F004C0DAB /* ExpenseListTableViewCell.swift in Sources */,
 				5ED2DC7F2063154C0042CF81 /* CurrencyConverterViewController.swift in Sources */,
+				5444710C20883F3C0065BF8B /* SecondTranslationViewController.swift in Sources */,
 				B7DD25632083FAD100B1FB93 /* DirectionsMapViewController.swift in Sources */,
+				5444710E20883F3C0065BF8B /* FirstTranslationViewController.swift in Sources */,
 				B7DD255F2083EF2000B1FB93 /* CurrentLocationOnMapViewController.swift in Sources */,
 				5EE339F4204592FF00189D4D /* AppDelegate.swift in Sources */,
 				B7DD25612083FAC800B1FB93 /* DirectionsViewController.swift in Sources */,

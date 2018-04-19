@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Doctor</key>
+	<array>
+		<string>Doctor</string>
+		<string>Where is the nearest hospital?</string>
+		<string>Can you call me a doctor?</string>
+	</array>
+	<key>Money</key>
+	<array>
+		<string>Bank</string>
+		<string>Where is the nearest Bank?</string>
+		<string>Where is the nearest ATM?</string>
+	</array>
+	<key>Police</key>
+	<array>
+		<string>Police</string>
+		<string>Where is the nearest police station?</string>
+		<string>I will call the police.</string>
+	</array>
+	<key>Train</key>
+	<array>
+		<string>Train</string>
+		<string>Where is the nearest train?</string>
+		<string>What does it cost to ride the train?</string>
+	</array>
+	<key>Food</key>
+	<array>
+		<string>Food</string>
+		<string>Where can I buy food nearby?</string>
+		<string>Any good restaurants nearby?</string>
+	</array>
+	<key>Bus</key>
+	<array>
+		<string>Bus</string>
+		<string>Where is the nearest bus stop?</string>
+		<string>What does the bus cost to ride?</string>
+	</array>
+</dict>
+</plist>

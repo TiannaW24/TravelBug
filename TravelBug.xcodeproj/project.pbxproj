@@ -103,7 +103,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5ED2DC63206300A80042CF81 /* View Controllers */ = {
+		5E0F5E012088211F0056B159 /* Money */ = {
 			isa = PBXGroup;
 			children = (
 				5ED2DC642063014C0042CF81 /* MoneyViewController.swift */,
@@ -115,6 +115,14 @@
 				5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */,
 				5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */,
 				5EA3E30520640FC800D90946 /* ExpenseSummaryViewController.swift */,
+			);
+			path = Money;
+			sourceTree = "<group>";
+		};
+		5ED2DC63206300A80042CF81 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E0F5E012088211F0056B159 /* Money */,
 				B7DD255B2083EE2F00B1FB93 /* Maps */,
 			);
 			path = "View Controllers";

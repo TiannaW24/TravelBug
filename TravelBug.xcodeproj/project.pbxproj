@@ -16,6 +16,8 @@
 		5444711120883F3C0065BF8B /* InitialTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5444710920883F3C0065BF8B /* InitialTranslationViewController.swift */; };
 		5444711220883F3C0065BF8B /* SecondTranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5444710A20883F3C0065BF8B /* SecondTranslationViewController.xib */; };
 		5E0F5E032088292A0056B159 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F5E022088292A0056B159 /* HomeViewController.swift */; };
+		5E207A2C208BB48000C3DC41 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E207A2B208BB48000C3DC41 /* iOSDevCenters+GIF.swift */; };
+		5E207A2E208BB57200C3DC41 /* globeanimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5E207A2D208BB57200C3DC41 /* globeanimation.gif */; };
 		5EA3E2FE20640DF100D90946 /* ExpenseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */; };
 		5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */; };
 		5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */; };
@@ -66,6 +68,8 @@
 		5444710920883F3C0065BF8B /* InitialTranslationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialTranslationViewController.swift; sourceTree = "<group>"; };
 		5444710A20883F3C0065BF8B /* SecondTranslationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondTranslationViewController.xib; sourceTree = "<group>"; };
 		5E0F5E022088292A0056B159 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5E207A2B208BB48000C3DC41 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		5E207A2D208BB57200C3DC41 /* globeanimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = globeanimation.gif; sourceTree = "<group>"; };
 		5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseInfoViewController.swift; sourceTree = "<group>"; };
 		5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				5EE339FF204592FF00189D4D /* Info.plist */,
 				5EC4D997206432BB0013AF16 /* Expenses.plist */,
 				5444710520883F3C0065BF8B /* presetSayings.plist */,
+				5E207A2B208BB48000C3DC41 /* iOSDevCenters+GIF.swift */,
+				5E207A2D208BB57200C3DC41 /* globeanimation.gif */,
 			);
 			path = TravelBug;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5444711020883F3C0065BF8B /* InitialTranslationViewController.xib in Resources */,
+				5E207A2E208BB57200C3DC41 /* globeanimation.gif in Resources */,
 				5EE339FE204592FF00189D4D /* LaunchScreen.storyboard in Resources */,
 				5EE339FB204592FF00189D4D /* Assets.xcassets in Resources */,
 				5EE339F9204592FF00189D4D /* Main.storyboard in Resources */,
@@ -357,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA3E30620640FC800D90946 /* ExpenseSummaryViewController.swift in Sources */,
+				5E207A2C208BB48000C3DC41 /* iOSDevCenters+GIF.swift in Sources */,
 				5ED2DC8920633CB40042CF81 /* CurrenciesTableViewController.swift in Sources */,
 				5444710B20883F3C0065BF8B /* TranslationCenterViewController.swift in Sources */,
 				5ED2DC8B20633F910042CF81 /* CurrenciesTableViewCell.swift in Sources */,

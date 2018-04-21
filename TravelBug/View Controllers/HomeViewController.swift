@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var insLabel: UILabel!
+    @IBOutlet var globeImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,10 @@ class HomeViewController: UIViewController {
         bgImageView.alpha = 0.5
         self.view.addSubview(bgImageView)
         self.view.sendSubview(toBack: bgImageView)
+        
+        //Gif
+        let globeGif = UIImage.gifImageWithName("globeanimation")
+        globeImageView.image = globeGif
     }
 
     override func didReceiveMemoryWarning() {

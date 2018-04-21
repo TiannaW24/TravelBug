@@ -1001,33 +1001,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to TravelBug" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBP-eR-87E">
-                                <rect key="frame" x="16" y="0.0" width="288" height="288"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="aTJ-bx-okh"/>
-                                    <constraint firstAttribute="height" constant="288" id="zhW-ph-xMV"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to TravelBug" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBP-eR-87E">
+                                <rect key="frame" x="16" y="20" width="288" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check out some of our features below!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0x-fj-WaV">
-                                <rect key="frame" x="58" y="264" width="212" height="108"/>
+                                <rect key="frame" x="54" y="226" width="212" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yJ7-Tp-Pfs">
+                                <rect key="frame" x="95" y="342" width="131" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="zBP-eR-87E" firstAttribute="top" secondItem="aS6-GK-FXo" secondAttribute="top" constant="-20" id="Fwe-U6-E4v"/>
-                            <constraint firstItem="zBP-eR-87E" firstAttribute="centerX" secondItem="4Tc-6C-XYr" secondAttribute="centerX" id="w84-Yf-dPN"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aS6-GK-FXo"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="TabBarIcon-Home" id="Ob2-cL-krS"/>
                     <connections>
+                        <outlet property="globeImageView" destination="yJ7-Tp-Pfs" id="w9g-Ok-zE1"/>
                         <outlet property="insLabel" destination="J0x-fj-WaV" id="2zw-eW-z7O"/>
                         <outlet property="welcomeLabel" destination="zBP-eR-87E" id="tQn-dK-hd0"/>
                     </connections>

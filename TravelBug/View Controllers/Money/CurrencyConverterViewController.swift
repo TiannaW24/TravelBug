@@ -18,6 +18,10 @@ class CurrencyConverterViewController: UIViewController {
     @IBOutlet var conversionResultLabel: UILabel!
     @IBOutlet var fromCurrencyTextField: UITextField!
     @IBOutlet var toCurrencyTextField: UITextField!
+    @IBOutlet var toCurrencyLabel: UILabel!
+    @IBOutlet var fromCurrencyLabel: UILabel!
+    @IBOutlet var amountLabel: UILabel!
+    @IBOutlet var seeCurrenciesButton: UIButton!
     
     //Instance variables
     var countries = [String()] //Holds names of all currencies
@@ -26,6 +30,31 @@ class CurrencyConverterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         conversionResultLabel.text! = ""
+        
+        //Tab Bar
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = self.view.frame
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        self.view.addSubview(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
+        
+        //TextFields
+        toCurrencyTextField.alpha = 0.7
+        fromCurrencyTextField.alpha = 0.7
+        amountTextField.alpha = 0.7
+        
+        //Labels and buttons
+        toCurrencyLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        fromCurrencyLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        amountLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        conversionResultLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
+        convertButton.tintColor = UIColor.white
+        seeCurrenciesButton.tintColor = UIColor.white
         
         //------------LOAD CURRENCIES FROM API----------------
         // Define the API query URL to obtain company data for a given stock symbol
@@ -102,18 +131,6 @@ class CurrencyConverterViewController: UIViewController {
         else {
             showAlertMessage(messageHeader: "JSON Data", messageBody: "Unable to obtain the JSON data file!")
         }
-        
-        //Tab Bar
-        self.tabBarController?.tabBar.barTintColor = UIColor.black
-        
-        //Background
-        let bgImage = UIImage(named: "blue_purple_background")
-        let bgImageView = UIImageView()
-        bgImageView.frame = self.view.frame
-        bgImageView.image = bgImage
-        bgImageView.alpha = 0.5
-        self.view.addSubview(bgImageView)
-        self.view.sendSubview(toBack: bgImageView)
     }
     
     @IBAction func seeAvailableCurrenciesButtonPressed(_ sender: UIButton) {
@@ -126,16 +143,29 @@ class CurrencyConverterViewController: UIViewController {
         let toInput = toCurrencyTextField.text!
         let fromInput = fromCurrencyTextField.text!
         
-        if (!checkValidCurrencyID(givenCurrencyID: toInput)) {
-            showAlertMessage(messageHeader: "Currency ID Error!", messageBody: "Sorry, \(toInput) is not a recognized currency. Please use the Avaialble Currencies link to view recognized currencies")
+        if (fromInput == "") {
+            showAlertMessage(messageHeader: "Currency Symbol Error!", messageBody: "Please enter a currency symbol to convert from")
+            return
+        }
+        if (toInput == "") {
+            showAlertMessage(messageHeader: "Currency Symbol Error!", messageBody: "Please enter a currency symbol to convert to")
+            return
+        }
+        if (amountTextField.text! == "") {
+            showAlertMessage(messageHeader: "Currency Amount Error!", messageBody: "Please enter a currency amount to convert")
             return
         }
         if (!checkValidCurrencyID(givenCurrencyID: fromInput)) {
-            showAlertMessage(messageHeader: "Currency ID Error!", messageBody: "Sorry, \(fromInput) is not a recognized currency. Please use the Available Currencies link to view recognized currencies")
+            showAlertMessage(messageHeader: "Currency Symbol Error!", messageBody: "Sorry, \(fromInput) is not a recognized currency. Please use the Available Currencies link to view recognized currencies")
+            return
+        }
+        if (!checkValidCurrencyID(givenCurrencyID: toInput)) {
+            showAlertMessage(messageHeader: "Currency Symbol Error!", messageBody: "Sorry, \(toInput) is not a recognized currency. Please use the Avaialble Currencies link to view recognized currencies")
             return
         }
         if (Double(amountTextField.text!) == nil) {
-            showAlertMessage(messageHeader: "Currency Amount Error!", messageBody: "Sorry, that amount is not valid. Please try again")
+            showAlertMessage(messageHeader: "Currency Amount Error!", messageBody: "Sorry, that amount is not convertable. Please try again")
+            return
         }
         
         //---------------USE API TO SHOW CONVERSION------------------
@@ -173,9 +203,10 @@ class CurrencyConverterViewController: UIViewController {
         //Calculate
         let amountDouble = Double(amountTextField.text!)
         convertedAmount = amountDouble! * conversionFactor
+        let formattedConvertedAmount = String(format: "%.2f", convertedAmount)
         
         //Update the label
-        conversionResultLabel.text = "\(amountTextField.text!) in \(toInput) is \(convertedAmount) in \(fromInput)"
+        conversionResultLabel.text = "\(amountTextField.text!) in \(toInput) is \(formattedConvertedAmount) in \(fromInput)"
     }
     
     func checkValidCurrencyID(givenCurrencyID: String) -> Bool {
@@ -189,6 +220,15 @@ class CurrencyConverterViewController: UIViewController {
             }
         }
         return matched
+    }
+    
+    @IBAction func keyboardDone(_ sender: UITextField) {
+        // When the Text Field resigns as first responder, the keyboard is automatically removed.
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func backgroundTouch(_ sender: UIControl) {
+        view.endEditing(true)
     }
     
     /*

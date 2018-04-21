@@ -49,6 +49,12 @@ class ExpenseInfoViewController: UIViewController {
         bgImageView.alpha = 0.5
         self.view.addSubview(bgImageView)
         self.view.sendSubview(toBack: bgImageView)
+        
+        //Labels
+        expenseNameLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 30)
+        expenseAmountLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 28)
+        expenseCategoryLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
+        expenseBudgetedLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 17)
     }
     
     override func didReceiveMemoryWarning() {

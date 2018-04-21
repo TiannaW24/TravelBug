@@ -26,7 +26,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf2-rB-RzE">
-                                <rect key="frame" x="61" y="214" width="210" height="50"/>
+                                <rect key="frame" x="48" y="214" width="230" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Currency Converter" image="currency conversion icon">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QA-gB-SxQ">
-                                <rect key="frame" x="70" y="289" width="180" height="50"/>
+                                <rect key="frame" x="48" y="289" width="223" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add an Expense" image="plus sign">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-MF-lx1">
-                                <rect key="frame" x="40" y="444" width="253" height="50"/>
+                                <rect key="frame" x="28" y="444" width="276" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Expenses Summary" image="calculator">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,15 +55,8 @@
                                     <action selector="viewExpensesSummaryButtonPressed:" destination="if7-Ze-tJl" eventType="touchUpInside" id="7K9-Jm-uco"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Money Tab! Choose any of the features below!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktC-ET-ETD">
-                                <rect key="frame" x="53" y="84" width="227" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVp-E4-9Vl">
-                                <rect key="frame" x="75" y="367" width="183" height="50"/>
+                                <rect key="frame" x="61" y="367" width="210" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="List of Expenses" image="list icon">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,12 +65,24 @@
                                     <action selector="listOfExpensesButtonPressed:" destination="if7-Ze-tJl" eventType="touchUpInside" id="uuT-Mi-m3q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose any of the features below to help manage your funds!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktC-ET-ETD">
+                                <rect key="frame" x="28" y="64" width="265" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="NVY-rU-mQT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Money" id="I2q-nf-vOj"/>
                     <connections>
+                        <outlet property="addExpenseButton" destination="5QA-gB-SxQ" id="EPp-o3-XvH"/>
+                        <outlet property="currencyButton" destination="Bf2-rB-RzE" id="Dy1-mm-Wy2"/>
+                        <outlet property="expenseListButton" destination="sVp-E4-9Vl" id="Wg1-38-afc"/>
+                        <outlet property="expenseSummaryButton" destination="cLA-MF-lx1" id="Dj7-sa-Au6"/>
+                        <outlet property="welcomeLabel" destination="ktC-ET-ETD" id="fJ0-01-wp6"/>
                         <segue destination="7Ar-vs-IeN" kind="show" identifier="Currency Converter" id="Imb-w9-YJ2"/>
                         <segue destination="eDv-Fy-k0X" kind="show" identifier="Add Expense" id="8tB-E4-lvC"/>
                         <segue destination="Oj7-Bd-PMd" kind="show" identifier="Expenses List" id="Wii-2V-bUc"/>
@@ -86,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvr-Tk-I5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="62.518740629685162"/>
+            <point key="canvasLocation" x="540" y="62.323943661971832"/>
         </scene>
         <!--Expense List-->
         <scene sceneID="cti-5X-Mcp">
@@ -112,11 +117,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExpenseCell" rowHeight="70" id="ahP-h1-B5J" customClass="ExpenseListTableViewCell" customModule="TravelBug" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExpenseCell" rowHeight="70" id="ahP-h1-B5J" customClass="ExpenseListTableViewCell" customModule="TravelBug" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ahP-h1-B5J" id="Z3E-86-f3t">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expense Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch0-9J-RRC">
@@ -127,7 +132,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRc-1l-655">
-                                                    <rect key="frame" x="250" y="24" width="55" height="21"/>
+                                                    <rect key="frame" x="237" y="24" width="55" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -227,7 +232,7 @@
         <scene sceneID="7lC-dL-d4n">
             <objects>
                 <viewController storyboardIdentifier="ExpenseEntry" id="eDv-Fy-k0X" customClass="AddExpenseViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i0c-jv-Xuz">
+                    <view key="view" contentMode="scaleToFill" id="i0c-jv-Xuz" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -239,18 +244,21 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expense Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBj-oj-jBz">
-                                <rect key="frame" x="16" y="73" width="288" height="21"/>
+                                <rect key="frame" x="16" y="77" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLd-nJ-udh">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: Taxi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLd-nJ-udh">
                                 <rect key="frame" x="51" y="109" width="231" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="keyboardDone:" destination="eDv-Fy-k0X" eventType="editingDidEndOnExit" id="3nG-VT-ykS"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expense Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVN-R8-L58">
                                 <rect key="frame" x="81" y="158" width="187" height="21"/>
@@ -259,33 +267,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miF-uN-AJW">
+                                <rect key="frame" x="0.0" y="175" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expense Amount " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8d-pm-Moh">
-                                <rect key="frame" x="16" y="326" width="296" height="21"/>
+                                <rect key="frame" x="18" y="286" width="296" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Was this expense budgeted for?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX0-bc-7eA">
-                                <rect key="frame" x="16" y="415" width="288" height="21"/>
+                                <rect key="frame" x="18" y="375" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miF-uN-AJW">
-                                <rect key="frame" x="0.0" y="166" width="320" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oHl-ZS-SAM">
-                                <rect key="frame" x="80" y="365" width="187" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 15.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oHl-ZS-SAM">
+                                <rect key="frame" x="82" y="321" width="187" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="keyboardDone:" destination="eDv-Fy-k0X" eventType="editingDidEndOnExit" id="8eM-1z-QSr"/>
+                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HBT-OS-99h">
-                                <rect key="frame" x="106" y="444" width="121" height="29"/>
+                                <rect key="frame" x="108" y="408" width="121" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Yes"/>
@@ -293,8 +304,9 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYu-ts-jfs">
-                                <rect key="frame" x="143" y="489" width="46" height="30"/>
+                                <rect key="frame" x="145" y="456" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="eDv-Fy-k0X" eventType="touchUpInside" id="5kN-YC-7lb"/>
@@ -303,12 +315,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="15h-lM-sTp"/>
+                        <connections>
+                            <action selector="backgroundTouch:" destination="eDv-Fy-k0X" eventType="touchDown" id="ESX-0M-6Gt"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="expenseAmountLabel" destination="z8d-pm-Moh" id="MGO-ui-HfI"/>
                         <outlet property="expenseAmountTextField" destination="oHl-ZS-SAM" id="dRl-qc-xoQ"/>
+                        <outlet property="expenseBudgetedLabel" destination="SX0-bc-7eA" id="mf1-QG-Vou"/>
                         <outlet property="expenseBudgetedSegControl" destination="HBT-OS-99h" id="xgF-ax-YXZ"/>
+                        <outlet property="expenseCategoryLabel" destination="iVN-R8-L58" id="a5G-Pq-F8b"/>
                         <outlet property="expenseCategoryPicker" destination="miF-uN-AJW" id="hKY-o6-4o3"/>
+                        <outlet property="expenseTitleLabel" destination="xBj-oj-jBz" id="ILN-CH-Jjl"/>
                         <outlet property="expenseTitleTextField" destination="VLd-nJ-udh" id="NKB-Lc-hvd"/>
+                        <outlet property="saveButton" destination="nYu-ts-jfs" id="fKt-gF-F8y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="an8-zh-ivL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -470,15 +490,23 @@
                     <navigationItem key="navigationItem" title="Expense Summary" id="QhD-KI-8rv"/>
                     <connections>
                         <outlet property="contentView" destination="dcx-7L-bTC" id="4rp-dw-T2K"/>
-                        <outlet property="entertainmentLabel" destination="UVp-jH-pwQ" id="AS3-sY-aBK"/>
-                        <outlet property="foodLabel" destination="Yxf-fL-u7G" id="IfC-rR-2Kh"/>
-                        <outlet property="lodgingLabel" destination="PG1-dr-aVd" id="jnQ-rx-d0t"/>
-                        <outlet property="medicalLabel" destination="8OF-QY-NMY" id="ZwO-8V-jLF"/>
-                        <outlet property="otherLabel" destination="4OZ-dM-cNV" id="iDX-IF-u6I"/>
+                        <outlet property="entertainmentLabel" destination="qaj-yH-ofC" id="KhQ-Na-G8L"/>
+                        <outlet property="entertainmentSumLabel" destination="UVp-jH-pwQ" id="eJT-ag-O9h"/>
+                        <outlet property="foodLabel" destination="0Mf-Nj-uyW" id="Zac-xY-PCz"/>
+                        <outlet property="foodSumLabel" destination="Yxf-fL-u7G" id="fs2-jc-isy"/>
+                        <outlet property="lodgingLabel" destination="coB-NK-Ngx" id="HVH-ai-FiI"/>
+                        <outlet property="lodgingSumLabel" destination="PG1-dr-aVd" id="bKz-PR-1ut"/>
+                        <outlet property="medicalLabel" destination="Osn-AW-liS" id="rda-Vp-5Fq"/>
+                        <outlet property="medicalSumLabel" destination="8OF-QY-NMY" id="OLX-9j-TZa"/>
+                        <outlet property="otherLabel" destination="gui-1S-pCI" id="qGU-tF-3hx"/>
+                        <outlet property="otherSumLabel" destination="4OZ-dM-cNV" id="yCp-kw-e96"/>
                         <outlet property="scrollView" destination="uXx-DZ-Mop" id="uAr-hM-DD5"/>
-                        <outlet property="shoppingLabel" destination="bYL-io-fNA" id="oLr-xG-qHE"/>
-                        <outlet property="totalLabel" destination="WIG-qs-EKZ" id="wzW-Yc-cLf"/>
-                        <outlet property="travelLabel" destination="ZfN-nk-eUg" id="xxQ-fR-KoO"/>
+                        <outlet property="shoppingLabel" destination="Bde-et-qKx" id="6KT-Hn-9um"/>
+                        <outlet property="shoppingSumLabel" destination="bYL-io-fNA" id="iDk-OB-5dA"/>
+                        <outlet property="totalLabel" destination="EoX-lw-FPq" id="mAs-5g-Q7N"/>
+                        <outlet property="totalSumLabel" destination="WIG-qs-EKZ" id="qt9-C2-44o"/>
+                        <outlet property="travelLabel" destination="SZ8-tR-mVt" id="Zev-A4-xAD"/>
+                        <outlet property="travelSumLabel" destination="ZfN-nk-eUg" id="Zoz-F1-OxC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IY6-GT-c3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -489,7 +517,7 @@
         <scene sceneID="4fE-Yk-FTw">
             <objects>
                 <viewController storyboardIdentifier="CurrencyConversion" id="7Ar-vs-IeN" customClass="CurrencyConverterViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZOd-mc-ue1">
+                    <view key="view" contentMode="scaleToFill" id="ZOd-mc-ue1" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -507,23 +535,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1qm-gH-Hz6">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: USD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1qm-gH-Hz6">
                                 <rect key="frame" x="45" y="136" width="237" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="keyboardDone:" destination="7Ar-vs-IeN" eventType="editingDidEndOnExit" id="mcD-19-gvC"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIO-3Z-hOu">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: USD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIO-3Z-hOu">
                                 <rect key="frame" x="42" y="245" width="237" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="keyboardDone:" destination="7Ar-vs-IeN" eventType="editingDidEndOnExit" id="0a1-0l-bu2"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isx-1W-GoJ">
                                 <rect key="frame" x="50" y="286" width="229" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="See Available Currencies"/>
                                 <connections>
                                     <action selector="seeAvailableCurrenciesButtonPressed:" destination="7Ar-vs-IeN" eventType="touchUpInside" id="F6g-Wp-Wa8"/>
@@ -532,7 +567,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Conversion Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vE-vQ-Zdx">
                                 <rect key="frame" x="9" y="447" width="302" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -543,16 +578,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsV-wl-PlJ">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsV-wl-PlJ">
                                 <rect key="frame" x="49" y="369" width="237" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="keyboardDone:" destination="7Ar-vs-IeN" eventType="editingDidEndOnExit" id="kpo-bO-opE"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOc-pE-CuL">
                                 <rect key="frame" x="126" y="423" width="68" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Convert"/>
                                 <connections>
                                     <action selector="convertButtonPressed:" destination="7Ar-vs-IeN" eventType="touchUpInside" id="RKb-Fu-Oqa"/>
@@ -561,13 +600,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="QGD-aY-z4r"/>
+                        <connections>
+                            <action selector="backgroundTouch:" destination="7Ar-vs-IeN" eventType="touchDown" id="yNm-Of-XJS"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="amountLabel" destination="IJE-KN-443" id="UfZ-Fg-h5a"/>
                         <outlet property="amountTextField" destination="MsV-wl-PlJ" id="kna-2A-Cc3"/>
                         <outlet property="conversionResultLabel" destination="2vE-vQ-Zdx" id="CfE-Zc-JPY"/>
                         <outlet property="convertButton" destination="jOc-pE-CuL" id="Qhb-3g-DwY"/>
+                        <outlet property="fromCurrencyLabel" destination="7oI-Hd-Rvx" id="i8K-nm-Z7f"/>
                         <outlet property="fromCurrencyTextField" destination="1qm-gH-Hz6" id="U5o-5g-U5K"/>
                         <outlet property="searchDisplayController" destination="1Hy-Ci-VDm" id="NEU-aT-Pk6"/>
+                        <outlet property="seeCurrenciesButton" destination="isx-1W-GoJ" id="7gS-Yv-ouA"/>
+                        <outlet property="toCurrencyLabel" destination="QNt-S8-9yP" id="H7y-1y-Bv4"/>
                         <outlet property="toCurrencyTextField" destination="ZIO-3Z-hOu" id="QU3-mi-cr0"/>
                         <segue destination="DZg-gl-HTn" kind="show" identifier="Currencies Table" id="z0t-pf-OwC"/>
                     </connections>

@@ -15,6 +15,11 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet var expenseCategoryPicker: UIPickerView!
     @IBOutlet var expenseAmountTextField: UITextField!
     @IBOutlet var expenseBudgetedSegControl: UISegmentedControl!
+    @IBOutlet var expenseTitleLabel: UILabel!
+    @IBOutlet var expenseCategoryLabel: UILabel!
+    @IBOutlet var expenseAmountLabel: UILabel!
+    @IBOutlet var expenseBudgetedLabel: UILabel!
+    @IBOutlet var saveButton: UIButton!
     
     // Obtain the object reference to the App Delegate object
     let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -40,6 +45,18 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
         bgImageView.alpha = 0.5
         self.view.addSubview(bgImageView)
         self.view.sendSubview(toBack: bgImageView)
+        
+        //TextFields, SegControl, SaveButton
+        expenseTitleTextField.alpha = 0.7
+        expenseAmountTextField.alpha = 0.7
+        expenseBudgetedSegControl.tintColor = UIColor.black
+        saveButton.tintColor = UIColor.white
+        
+        //Labels
+        expenseTitleLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        expenseAmountLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        expenseBudgetedLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        expenseCategoryLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
     }
     
     //categoryPicker Methods
@@ -86,6 +103,15 @@ class AddExpenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
         expenseTitleTextField.text! = ""
         expenseAmountTextField.text! = ""
         
+    }
+    
+    @IBAction func keyboardDone(_ sender: UITextField) {
+        // When the Text Field resigns as first responder, the keyboard is automatically removed.
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func backgroundTouch(_ sender: UIControl) {
+        view.endEditing(true)
     }
     
     /*

@@ -75,6 +75,9 @@ class ExpenseSummaryViewController: UIViewController {
         //Tab Bar
         self.tabBarController?.tabBar.barTintColor = UIColor.black
         
+        contentView.frame = CGRect(x: 0, y:0, width: UIScreen.main.bounds.width, height: 750)
+        scrollView.frame = CGRect(x: 0, y:0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        
         //Background
         let bgImage = UIImage(named: "blue_purple_background")
         let bgImageView = UIImageView()

@@ -12,8 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialTranslationViewController" customModule="TravelBug" customModuleProvider="target">
             <connections>
+                <outlet property="fromLanguageLabel" destination="b6w-1Z-Lkl" id="Pkj-ZM-NUP"/>
                 <outlet property="outputLanguagePickerView" destination="2UJ-fg-NHo" id="EX8-vQ-BW8"/>
                 <outlet property="primaryLangPickerView" destination="t7B-1z-T27" id="wtf-d7-Liv"/>
+                <outlet property="toLanguageLabel" destination="PSF-x3-pgA" id="d3V-gr-Eqo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,49 +25,49 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Primary Language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6w-1Z-Lkl">
-                    <rect key="frame" x="16" y="118" width="288" height="21"/>
+                    <rect key="frame" x="16" y="55" width="288" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="lKU-ap-hyt"/>
+                        <constraint firstAttribute="height" constant="21" id="RrK-gf-g3h"/>
+                        <constraint firstAttribute="width" constant="288" id="sAz-DC-f2n"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7B-1z-T27">
-                    <rect key="frame" x="0.0" y="147" width="320" height="162"/>
+                    <rect key="frame" x="0.0" y="84" width="320" height="162"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="162" id="tc0-RE-rDv"/>
-                    </constraints>
-                </pickerView>
-                <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UJ-fg-NHo">
-                    <rect key="frame" x="0.0" y="354" width="320" height="162"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="162" id="FVP-ez-miF"/>
+                        <constraint firstAttribute="height" constant="162" id="FeM-Uf-E3L"/>
+                        <constraint firstAttribute="width" constant="320" id="Z8c-Zg-fAP"/>
                     </constraints>
                 </pickerView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language To Translate To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSF-x3-pgA">
-                    <rect key="frame" x="16" y="325" width="288" height="21"/>
+                    <rect key="frame" x="16" y="262" width="288" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="a3V-Y0-dN5"/>
+                        <constraint firstAttribute="width" constant="288" id="gLj-BN-ihd"/>
+                        <constraint firstAttribute="height" constant="21" id="sMk-JP-gOP"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UJ-fg-NHo">
+                    <rect key="frame" x="0.0" y="299" width="320" height="162"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="F6W-jp-QaB"/>
+                        <constraint firstAttribute="width" constant="320" id="rjz-cD-1Ng"/>
+                    </constraints>
+                </pickerView>
             </subviews>
             <constraints>
-                <constraint firstItem="2UJ-fg-NHo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="21W-iy-tGg"/>
-                <constraint firstItem="PSF-x3-pgA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="JxG-sH-aNX"/>
-                <constraint firstItem="t7B-1z-T27" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Kkd-Vt-Ba9"/>
-                <constraint firstItem="t7B-1z-T27" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VR7-o6-2IO"/>
-                <constraint firstItem="2UJ-fg-NHo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="byf-xy-ab8"/>
-                <constraint firstItem="PSF-x3-pgA" firstAttribute="top" secondItem="t7B-1z-T27" secondAttribute="bottom" constant="16" id="ewB-xv-mnH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b6w-1Z-Lkl" secondAttribute="trailing" constant="16" id="gac-gR-DZQ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PSF-x3-pgA" secondAttribute="trailing" constant="16" id="pW4-9L-iIA"/>
-                <constraint firstItem="t7B-1z-T27" firstAttribute="top" secondItem="b6w-1Z-Lkl" secondAttribute="bottom" constant="8" id="rnM-V3-5GG"/>
-                <constraint firstItem="2UJ-fg-NHo" firstAttribute="top" secondItem="PSF-x3-pgA" secondAttribute="bottom" constant="8" id="tlK-wG-9FY"/>
-                <constraint firstItem="b6w-1Z-Lkl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="98" id="yZI-h2-2EJ"/>
-                <constraint firstItem="b6w-1Z-Lkl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zTl-dc-iPL"/>
+                <constraint firstItem="b6w-1Z-Lkl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="833-i8-4Ed"/>
+                <constraint firstItem="2UJ-fg-NHo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="96f-RR-8QJ"/>
+                <constraint firstItem="2UJ-fg-NHo" firstAttribute="top" secondItem="PSF-x3-pgA" secondAttribute="bottom" constant="16" id="O9L-4B-Oq8"/>
+                <constraint firstItem="PSF-x3-pgA" firstAttribute="top" secondItem="t7B-1z-T27" secondAttribute="bottom" constant="16" id="OmE-eg-Mu9"/>
+                <constraint firstItem="t7B-1z-T27" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y9o-bv-A6K"/>
+                <constraint firstItem="t7B-1z-T27" firstAttribute="top" secondItem="b6w-1Z-Lkl" secondAttribute="bottom" constant="8" id="bOr-fz-M3G"/>
+                <constraint firstItem="b6w-1Z-Lkl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dSQ-TR-B0d"/>
+                <constraint firstItem="PSF-x3-pgA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qgo-Ap-U95"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="24" y="52"/>

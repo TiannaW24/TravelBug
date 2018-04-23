@@ -40,6 +40,26 @@ class FirstTranslationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Tab Bar
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = self.view.frame
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        self.view.addSubview(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
+        
+        //Welcome and instruction label
+        phraseOneLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 18)
+        phraseOneLabel.textColor = UIColor.black
+        phraseTwoLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 18)
+        phraseTwoLabel.textColor = UIColor.black
+        phraseThreeLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 18)
+        phraseThreeLabel.textColor = UIColor.black
+        
         presetButtons = [busImageView, foodImageView, trainImageView, policeImageView, moneyImageView, doctorImageView]
         
         setupGestureRecognizers()

@@ -12,8 +12,9 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
 
     //Picker Views
     @IBOutlet var primaryLangPickerView: UIPickerView!
-    
     @IBOutlet var outputLanguagePickerView: UIPickerView!
+    @IBOutlet var toLanguageLabel: UILabel!
+    @IBOutlet var fromLanguageLabel: UILabel!
     
     struct languageStruct {
         var key = ""
@@ -34,6 +35,19 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Tab Bar
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = self.view.frame
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        self.view.addSubview(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
+        
         //Get a list of accepted languages from the API
         getLanguages()
         //Setup the Picker Views delegate and data sources to be the view controller
@@ -41,6 +55,12 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
         primaryLangPickerView.delegate = self
         outputLanguagePickerView.dataSource = self
         outputLanguagePickerView.delegate = self
+        
+        //Labels
+        toLanguageLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
+        toLanguageLabel.textColor = UIColor.black
+        fromLanguageLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
+        fromLanguageLabel.textColor = UIColor.black
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

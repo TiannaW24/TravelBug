@@ -28,6 +28,14 @@ class FirstTranslationViewController: UIViewController {
     @IBOutlet var phraseTwoLabel: UILabel!
     @IBOutlet var phraseThreeLabel: UILabel!
     
+    //Phrase Speaker Buttons
+    @IBOutlet var phraseOneSpeakerButton: UIButton!
+    @IBOutlet var phraseTwoSpeakerButton: UIButton!
+    @IBOutlet var phraseThreeSpeakerButton: UIButton!
+    
+    @IBOutlet var contentView: UIView!
+    @IBOutlet var scrollView: UIScrollView!
+    
     //ImageView Array
     var presetButtons: [UIImageView] = []
     
@@ -44,21 +52,42 @@ class FirstTranslationViewController: UIViewController {
         self.tabBarController?.tabBar.barTintColor = UIColor.black
         
         //Background
+        contentView.frame = CGRect(x: 0, y:0, width: UIScreen.main.bounds.width, height: 750)
+        scrollView.frame = CGRect(x: 0, y:0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        
+        //Background
         let bgImage = UIImage(named: "blue_purple_background")
         let bgImageView = UIImageView()
-        bgImageView.frame = self.view.frame
+        bgImageView.frame = contentView.frame
         bgImageView.image = bgImage
         bgImageView.alpha = 0.5
-        self.view.addSubview(bgImageView)
-        self.view.sendSubview(toBack: bgImageView)
+        contentView.addSubview(bgImageView)
+        contentView.sendSubview(toBack: bgImageView)
         
         //Welcome and instruction label
-        phraseOneLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 18)
+        phraseOneLabel.font = UIFont (name: "HelveticaNeue-BoldItalic", size: 16)
         phraseOneLabel.textColor = UIColor.black
-        phraseTwoLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 18)
+        phraseTwoLabel.font = UIFont (name: "HelveticaNeue-BoldItalic", size: 16)
         phraseTwoLabel.textColor = UIColor.black
-        phraseThreeLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 18)
+        phraseThreeLabel.font = UIFont (name: "HelveticaNeue-BoldItalic", size: 16)
         phraseThreeLabel.textColor = UIColor.black
+        phraseOneTranslation.font = UIFont (name: "HelveticaNeue-Italic", size: 16)
+        phraseOneTranslation.textColor = UIColor.black
+        phraseTwoTranslation.font = UIFont (name: "HelveticaNeue-Italic", size: 16)
+        phraseTwoTranslation.textColor = UIColor.black
+        phraseThreeTranslation.font = UIFont (name: "HelveticaNeue-Italic", size: 16)
+        phraseThreeTranslation.textColor = UIColor.black
+        
+        //Buttons
+        let tempImgOne = phraseOneSpeakerButton.imageView?.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        phraseOneSpeakerButton.imageView?.image = tempImgOne
+        phraseOneSpeakerButton.tintColor = UIColor.white
+        let tempImgTwo = phraseTwoSpeakerButton.imageView?.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        phraseTwoSpeakerButton.imageView?.image = tempImgTwo
+        phraseTwoSpeakerButton.tintColor = UIColor.white
+        let tempImgThree = phraseThreeSpeakerButton.imageView?.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        phraseThreeSpeakerButton.imageView?.image = tempImgThree
+        phraseThreeSpeakerButton.tintColor = UIColor.white
         
         presetButtons = [busImageView, foodImageView, trainImageView, policeImageView, moneyImageView, doctorImageView]
         
@@ -155,6 +184,22 @@ class FirstTranslationViewController: UIViewController {
             showAlertMessage(messageHeader: "JSON Data", messageBody: "Unable to obtain the JSON data file!")
         }
         return "Translation Failed"
+    }
+    
+    //SPEAKER BUTTONS TAPPED
+    
+    @IBAction func translationOneSpeakerButtonTapped(_ sender: UIButton) {
+        //TODO
+    }
+    
+    
+    @IBAction func translationTwoSpeakerButtonTapped(_ sender: UIButton) {
+        //TODO
+    }
+    
+    
+    @IBAction func translationThreeSpeakerButtonTapped(_ sender: UIButton) {
+        //TODO
     }
     
     /*

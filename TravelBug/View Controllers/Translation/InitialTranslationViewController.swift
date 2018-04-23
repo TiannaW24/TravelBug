@@ -42,7 +42,7 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
         //Background
         let bgImage = UIImage(named: "blue_purple_background")
         let bgImageView = UIImageView()
-        bgImageView.frame = self.view.frame
+        bgImageView.frame = CGRect(x: 0, y:0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         bgImageView.image = bgImage
         bgImageView.alpha = 0.5
         self.view.addSubview(bgImageView)

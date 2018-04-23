@@ -13,6 +13,9 @@ class SecondTranslationViewController: UIViewController {
     //Text View Variable
     @IBOutlet var translateFromTextView: UITextView!
     @IBOutlet var translateToTextView: UITextView!
+    @IBOutlet var translateToLabel: UILabel!
+    @IBOutlet var translateFromLabel: UILabel!
+    @IBOutlet var translateButton: UIButton!
     
     let apiKey = "trnsl.1.1.20180418T190140Z.d89b8f4ad4a5d910.32872d8ea1451edc7d7df8e6a7153eab3b872f73"
     
@@ -21,9 +24,33 @@ class SecondTranslationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Tab Bar
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = CGRect(x: 0, y:0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        self.view.addSubview(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
+        
+        //Instruction labels and Buttons
+        translateToLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
+        translateToLabel.textColor = UIColor.black
+        translateFromLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
+        translateFromLabel.textColor = UIColor.black
+        translateButton.tintColor = UIColor.white
+        
+        //TextViews
+        translateToTextView.alpha = 0.7
+        translateFromTextView.alpha = 0.7
+    
+        
         translateFromTextView.text = ""
         translateToTextView.text = ""
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

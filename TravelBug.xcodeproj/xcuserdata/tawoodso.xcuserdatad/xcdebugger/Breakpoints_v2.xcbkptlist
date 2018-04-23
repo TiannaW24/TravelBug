@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TravelBug/View Controllers/HomeViewController.swift"
-            timestampString = "546032021.104074"
+            timestampString = "546186496.7988009"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -378,13 +378,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TravelBug/View Controllers/Money/ExpenseSummaryViewController.swift"
-            timestampString = "546037431.9954571"
+            timestampString = "546185135.477844"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

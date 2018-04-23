@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var insLabel: UILabel!
     @IBOutlet var globeImageView: UIImageView!
+    @IBOutlet var poweredByLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class HomeViewController: UIViewController {
         welcomeLabel.textColor = UIColor.white
         insLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 30)
         insLabel.textColor = UIColor.white
+        poweredByLabel.font = UIFont (name: "HelveticaNeue-LightItalic", size: 12)
+        poweredByLabel.textColor = UIColor.white
         
         //Tab Bar
         self.tabBarController?.tabBar.barTintColor = UIColor.black

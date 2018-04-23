@@ -16,6 +16,9 @@ class DirectionsViewController: UIViewController {
     // Instance variables holding the object references of the UI objects created in the Storyboard
     @IBOutlet var mapTypeSegmentedControl: UISegmentedControl!
     @IBOutlet var addressTextField: UITextField!
+    @IBOutlet var instructionsLabel: UILabel!
+    @IBOutlet var methodOfTravelLabel: UILabel!
+    @IBOutlet var getDirectionsButton: UIButton!
     
     // Data to pass to downstream view controller GeocodingMapViewController
     var addressToPass = ""
@@ -31,6 +34,28 @@ class DirectionsViewController: UIViewController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Front end Design
+        //Tab Bar
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = self.view.frame
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        self.view.addSubview(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
+        
+        //Label, segcontrol and buttons
+        instructionsLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        getDirectionsButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        getDirectionsButton.tintColor = UIColor.white
+        mapTypeSegmentedControl.tintColor = UIColor.black
+        methodOfTravelLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        methodOfTravelLabel.tintColor = UIColor.black
+        addressTextField.alpha = 0.7
         
         // Set Standard as the default map type
         mapTypeSegmentedControl.selectedSegmentIndex = 0

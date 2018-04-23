@@ -979,7 +979,7 @@
             </objects>
             <point key="canvasLocation" x="-3684" y="62"/>
         </scene>
-        <!--Travel Map-->
+        <!--Maps-->
         <scene sceneID="6yr-sD-IX1">
             <objects>
                 <viewController id="3D6-zr-6iO" customClass="CurrentLocationViewController" customModule="TravelBug" customModuleProvider="target" sceneMemberID="viewController">
@@ -1059,9 +1059,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YvR-mH-M0B"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Travel Map" id="q90-6A-hgF"/>
+                    <navigationItem key="navigationItem" title="Maps" id="q90-6A-hgF"/>
                     <connections>
+                        <outlet property="currentLocationButton" destination="7Tl-9z-R7V" id="rbh-rA-HyL"/>
+                        <outlet property="currentLocationLabel" destination="bYf-Ma-yPo" id="Efj-5R-o7c"/>
+                        <outlet property="getDirectionsButton" destination="sCC-8d-vqn" id="SwR-oz-Dum"/>
                         <outlet property="mapTypeSegmentedControl" destination="wpC-X3-Q4w" id="5ey-QI-O7p"/>
+                        <outlet property="orLabel" destination="1J0-aT-XAp" id="VdS-J4-aNc"/>
                         <segue destination="nir-4g-NVg" kind="show" identifier="My Location" id="tPC-70-5dD"/>
                         <segue destination="S7A-J0-NWz" kind="show" identifier="Get Directions" id="p2g-yl-RSX"/>
                     </connections>
@@ -1089,7 +1093,7 @@
                                     <segment title="Driving"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kWE-vA-yy9">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: Eiffel Tower" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kWE-vA-yy9">
                                 <rect key="frame" x="16" y="152" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3O8-wT-kjf"/>
@@ -1155,7 +1159,10 @@
                     </view>
                     <connections>
                         <outlet property="addressTextField" destination="kWE-vA-yy9" id="IYi-Jy-8qw"/>
+                        <outlet property="getDirectionsButton" destination="iIP-f2-UjJ" id="5Cw-Ty-4xH"/>
+                        <outlet property="instructionsLabel" destination="Kle-5s-FKY" id="Uyp-hp-0fO"/>
                         <outlet property="mapTypeSegmentedControl" destination="7r5-cD-Itr" id="O3o-nI-N2y"/>
+                        <outlet property="methodOfTravelLabel" destination="KmQ-qc-Ykn" id="yZc-0C-P8N"/>
                         <segue destination="9HN-qA-jq7" kind="show" identifier="Directions Map" id="G7A-Iz-kGR"/>
                     </connections>
                 </viewController>
@@ -1276,15 +1283,27 @@
                                     <constraint firstAttribute="height" constant="128" id="VRo-4b-lqh"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by DevCenters" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUY-aq-as0">
+                                <rect key="frame" x="220" y="478" width="100" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Yyi-tt-KFN"/>
+                                    <constraint firstAttribute="height" constant="41" id="loB-bD-TKV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="lUY-aq-as0" firstAttribute="bottom" secondItem="aS6-GK-FXo" secondAttribute="bottom" id="7Ai-wd-z3I"/>
                             <constraint firstItem="J0x-fj-WaV" firstAttribute="centerX" secondItem="4Tc-6C-XYr" secondAttribute="centerX" id="MP7-Rr-Omp"/>
                             <constraint firstItem="zBP-eR-87E" firstAttribute="centerX" secondItem="4Tc-6C-XYr" secondAttribute="centerX" id="Wtn-QG-Yp2"/>
                             <constraint firstItem="J0x-fj-WaV" firstAttribute="top" secondItem="zBP-eR-87E" secondAttribute="bottom" constant="2" id="elW-Ak-55V"/>
                             <constraint firstItem="zBP-eR-87E" firstAttribute="top" secondItem="aS6-GK-FXo" secondAttribute="top" constant="4" id="qbV-3V-2wf"/>
                             <constraint firstItem="yJ7-Tp-Pfs" firstAttribute="top" secondItem="J0x-fj-WaV" secondAttribute="bottom" constant="8" id="rW5-5S-AU2"/>
                             <constraint firstItem="yJ7-Tp-Pfs" firstAttribute="centerX" secondItem="4Tc-6C-XYr" secondAttribute="centerX" id="uOs-FG-s1L"/>
+                            <constraint firstItem="lUY-aq-as0" firstAttribute="trailing" secondItem="aS6-GK-FXo" secondAttribute="trailing" id="xbD-cY-Wyu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aS6-GK-FXo"/>
                     </view>
@@ -1292,6 +1311,7 @@
                     <connections>
                         <outlet property="globeImageView" destination="yJ7-Tp-Pfs" id="w9g-Ok-zE1"/>
                         <outlet property="insLabel" destination="J0x-fj-WaV" id="2zw-eW-z7O"/>
+                        <outlet property="poweredByLabel" destination="lUY-aq-as0" id="o5h-3f-Zqe"/>
                         <outlet property="welcomeLabel" destination="zBP-eR-87E" id="tQn-dK-hd0"/>
                     </connections>
                 </viewController>

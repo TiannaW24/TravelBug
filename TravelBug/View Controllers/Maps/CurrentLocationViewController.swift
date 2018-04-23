@@ -14,6 +14,10 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     
     // Instance variables holding the object references of the UI objects created in the Storyboard
     @IBOutlet var mapTypeSegmentedControl: UISegmentedControl!
+    @IBOutlet var currentLocationLabel: UILabel!
+    @IBOutlet var currentLocationButton: UIButton!
+    @IBOutlet var getDirectionsButton: UIButton!
+    @IBOutlet var orLabel: UILabel!
     
     // Data to pass to downstream view controller CurrentLocationOnMapViewController
     var mapTypeToPass: MKMapType?
@@ -32,6 +36,31 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Front end Design
+        //Tab Bar
+        self.tabBarController?.tabBar.barTintColor = UIColor.black
+        
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = self.view.frame
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        self.view.addSubview(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
+        
+        //Label, segcontrol and buttons
+        currentLocationLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        getDirectionsButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        getDirectionsButton.tintColor = UIColor.white
+        currentLocationButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        currentLocationButton.tintColor = UIColor.white
+        mapTypeSegmentedControl.tintColor = UIColor.black
+        orLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        orLabel.tintColor = UIColor.black
+        
+        
         //mapTypeSegmentedControl.selectedSegmentIndex = -1
         
         /*

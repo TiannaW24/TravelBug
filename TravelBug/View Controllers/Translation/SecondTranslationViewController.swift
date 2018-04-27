@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SecondTranslationViewController: UIViewController {
 
     //Text View Variable
     @IBOutlet var translateFromTextView: UITextView!
     @IBOutlet var translateToTextView: UITextView!
-    @IBOutlet var translateToLabel: UILabel!
     @IBOutlet var translateFromLabel: UILabel!
     @IBOutlet var translateButton: UIButton!
+    @IBOutlet var pronounciationButton: UIButton!
+    
+    //Speech To Text
+    let speechSynthesizer = AVSpeechSynthesizer()
     
     let apiKey = "trnsl.1.1.20180418T190140Z.d89b8f4ad4a5d910.32872d8ea1451edc7d7df8e6a7153eab3b872f73"
     
@@ -38,8 +42,6 @@ class SecondTranslationViewController: UIViewController {
         self.view.sendSubview(toBack: bgImageView)
         
         //Instruction labels and Buttons
-        translateToLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
-        translateToLabel.textColor = UIColor.black
         translateFromLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
         translateFromLabel.textColor = UIColor.black
         translateButton.tintColor = UIColor.white
@@ -51,6 +53,10 @@ class SecondTranslationViewController: UIViewController {
         
         translateFromTextView.text = ""
         translateToTextView.text = ""
+        
+        let tempImgOne = pronounciationButton.imageView?.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        pronounciationButton.imageView?.image = tempImgOne
+        pronounciationButton.tintColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
@@ -134,6 +140,25 @@ class SecondTranslationViewController: UIViewController {
         view.endEditing(true)
     }
     
+    //Yandex Link Pressed
+    @IBAction func yandexPressed(_ sender: UIButton) {
+        if let url = URL(string: "https://translate.yandex.com/") {
+            UIApplication.shared.open(url, options: [:])
+        }
+        
+    }
+    
+    @IBAction func pronounceTransaltion(_ sender: Any) {
+        pronounceText(text: translateToTextView.text!)
+    }
+    
+    func pronounceText(text: String) {
+        let whatToSay = AVSpeechUtterance(string: text)
+        whatToSay.voice = AVSpeechSynthesisVoice(language: applicationDelegate.outputLanguage)
+
+        speechSynthesizer.speak(whatToSay)
+    }
+    
     /*
      -----------------------------
      MARK: - Display Alert Message
@@ -154,5 +179,17 @@ class SecondTranslationViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        /*
+         ---------------------------------------------------------------------
+         Force this view to be displayed first in Portrait device orientation.
+         However, the user can override this by manually rotating the device.
+         ---------------------------------------------------------------------
+         */
+        let portraitValue = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(portraitValue, forKey: "orientation")
+        UIViewController.attemptRotationToDeviceOrientation()
+    }
 
 }

@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondTranslationViewController" customModule="TravelBug" customModuleProvider="target">
             <connections>
+                <outlet property="pronounciationButton" destination="teo-fq-isb" id="j9D-ff-tcM"/>
                 <outlet property="translateButton" destination="jWf-We-sc5" id="cV3-qy-nRJ"/>
                 <outlet property="translateFromLabel" destination="qBI-St-lAY" id="eXA-VY-FwD"/>
                 <outlet property="translateFromTextView" destination="CaU-iG-Je2" id="Faa-wG-RxW"/>
-                <outlet property="translateToLabel" destination="OGI-3h-ZNZ" id="uZm-ZC-0FM"/>
                 <outlet property="translateToTextView" destination="PFt-Kt-O2a" id="3TV-TL-V53"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,7 +34,7 @@
                     </constraints>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What To Translate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBI-St-lAY">
                     <rect key="frame" x="16" y="28" width="288" height="21"/>
@@ -43,11 +43,11 @@
                         <constraint firstAttribute="height" constant="21" id="JKB-Y8-Anq"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWf-We-sc5">
-                    <rect key="frame" x="16" y="408" width="288" height="39"/>
+                    <rect key="frame" x="16" y="198" width="288" height="39"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="288" id="2Zu-qK-3lk"/>
                         <constraint firstAttribute="height" constant="39" id="iNX-iz-Zqv"/>
@@ -59,7 +59,7 @@
                     </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PFt-Kt-O2a">
-                    <rect key="frame" x="32" y="236" width="256" height="158"/>
+                    <rect key="frame" x="32" y="243" width="256" height="158"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="158" id="EEU-tM-tfW"/>
@@ -67,35 +67,50 @@
                     </constraints>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGI-3h-ZNZ">
-                    <rect key="frame" x="16" y="207" width="288" height="21"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlX-kK-3Em">
+                    <rect key="frame" x="16" y="524" width="288" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="Powered by Yandex.Translate">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="yandexPressed:" destination="-1" eventType="touchUpInside" id="7Nd-To-m0d"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teo-fq-isb">
+                    <rect key="frame" x="142" y="409" width="36" height="46"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="288" id="Dg0-xj-1U9"/>
-                        <constraint firstAttribute="height" constant="21" id="kJj-PZ-MCQ"/>
+                        <constraint firstAttribute="width" constant="36" id="U7Z-qr-T4V"/>
+                        <constraint firstAttribute="height" constant="46" id="rPz-zN-dvl"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <state key="normal" title="Button" image="speakerTranslation"/>
+                    <connections>
+                        <action selector="pronounceTransaltion:" destination="-1" eventType="touchUpInside" id="OUK-4O-A7s"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CaU-iG-Je2" secondAttribute="trailing" constant="32" id="0bv-qj-iFZ"/>
+                <constraint firstItem="VlX-kK-3Em" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="GXZ-z2-LGg"/>
                 <constraint firstItem="CaU-iG-Je2" firstAttribute="top" secondItem="qBI-St-lAY" secondAttribute="bottom" constant="15" id="Hec-oY-dAl"/>
+                <constraint firstItem="PFt-Kt-O2a" firstAttribute="top" secondItem="jWf-We-sc5" secondAttribute="bottom" constant="6" id="HkN-zo-dSq"/>
                 <constraint firstItem="PFt-Kt-O2a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="KDo-8f-Flj"/>
                 <constraint firstItem="qBI-St-lAY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="Lh2-Ru-8nO"/>
-                <constraint firstItem="jWf-We-sc5" firstAttribute="top" secondItem="PFt-Kt-O2a" secondAttribute="bottom" constant="14" id="NJ3-v2-DM4"/>
                 <constraint firstItem="jWf-We-sc5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rdf-0g-2VO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PFt-Kt-O2a" secondAttribute="trailing" constant="32" id="SPT-G7-dHD"/>
                 <constraint firstItem="CaU-iG-Je2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T25-Y8-YOG"/>
-                <constraint firstItem="OGI-3h-ZNZ" firstAttribute="top" secondItem="CaU-iG-Je2" secondAttribute="bottom" constant="15" id="b6u-IX-5R0"/>
+                <constraint firstItem="VlX-kK-3Em" firstAttribute="top" secondItem="teo-fq-isb" secondAttribute="bottom" constant="69" id="abj-Kk-sfR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VlX-kK-3Em" secondAttribute="trailing" constant="16" id="dzY-44-T6H"/>
+                <constraint firstItem="teo-fq-isb" firstAttribute="top" secondItem="PFt-Kt-O2a" secondAttribute="bottom" constant="8" id="eGy-35-rLa"/>
                 <constraint firstItem="PFt-Kt-O2a" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g3W-xF-mF7"/>
-                <constraint firstItem="PFt-Kt-O2a" firstAttribute="top" secondItem="OGI-3h-ZNZ" secondAttribute="bottom" constant="8" id="g65-LN-WbH"/>
                 <constraint firstItem="CaU-iG-Je2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="gIz-7B-bRN"/>
-                <constraint firstItem="OGI-3h-ZNZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gf2-TZ-BSP"/>
+                <constraint firstItem="teo-fq-isb" firstAttribute="top" secondItem="PFt-Kt-O2a" secondAttribute="bottom" constant="8" id="jnf-bb-Fvq"/>
+                <constraint firstItem="teo-fq-isb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="k3C-OD-ZAr"/>
                 <constraint firstItem="qBI-St-lAY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lfB-Kg-tcf"/>
+                <constraint firstItem="jWf-We-sc5" firstAttribute="top" secondItem="CaU-iG-Je2" secondAttribute="bottom" constant="6" id="pbc-MD-8Oi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
@@ -104,4 +119,7 @@
             <point key="canvasLocation" x="24" y="52"/>
         </view>
     </objects>
+    <resources>
+        <image name="speakerTranslation" width="512" height="512"/>
+    </resources>
 </document>

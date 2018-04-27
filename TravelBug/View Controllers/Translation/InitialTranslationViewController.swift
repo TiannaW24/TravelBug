@@ -61,6 +61,9 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
         toLanguageLabel.textColor = UIColor.black
         fromLanguageLabel.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
         fromLanguageLabel.textColor = UIColor.black
+        
+        applicationDelegate.primaryLanguage = languages[0].key
+        applicationDelegate.outputLanguage = languages[0].key
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -154,6 +157,19 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
         
         // Present the alert controller
         present(alertController, animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        /*
+         ---------------------------------------------------------------------
+         Force this view to be displayed first in Portrait device orientation.
+         However, the user can override this by manually rotating the device.
+         ---------------------------------------------------------------------
+         */
+        let portraitValue = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(portraitValue, forKey: "orientation")
+        UIViewController.attemptRotationToDeviceOrientation()
     }
 
 }

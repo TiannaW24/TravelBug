@@ -47,4 +47,9 @@ class TranslationCenterViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.translationMainScrollView.contentSize = CGSize(width: translationMainScrollView.contentSize.width, height: translationMainScrollView.frame.size.height)
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 }

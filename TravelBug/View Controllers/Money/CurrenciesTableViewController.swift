@@ -16,8 +16,8 @@ class CurrenciesTableViewController: UITableViewController, UISearchResultsUpdat
     // Obtain the object reference to the App Delegate object
     let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    let MINT_CREAM = UIColor(red: 245.0/255.0, green: 255.0/255.0, blue: 250.0/255.0, alpha: 1.0)
-    let OLD_LACE = UIColor(red: 253.0/255.0, green: 245.0/255.0, blue: 230.0/255.0, alpha: 1.0)
+    let MINT_CREAM = UIColor(red: 165.0/255.0, green: 216.0/255.0, blue: 237.0/255.0, alpha: 1.0)
+    let OLD_LACE = UIColor(red: 227.0/255.0, green: 197.0/255.0, blue: 245.0/255.0, alpha: 1.0)
     let tableViewRowHeight: CGFloat = 70.0
     
     //Instance variables
@@ -195,7 +195,6 @@ class CurrenciesTableViewController: UITableViewController, UISearchResultsUpdat
     
     // Asks the table view delegate to return the height of a given row.
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return tableViewRowHeight
     }
     

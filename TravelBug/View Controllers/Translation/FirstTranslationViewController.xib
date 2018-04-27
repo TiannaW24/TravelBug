@@ -190,6 +190,20 @@
                                         <action selector="yandexPressed:" destination="-1" eventType="touchUpInside" id="Ub6-hw-QcV"/>
                                     </connections>
                                 </button>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RightArrowBlack" translatesAutoresizingMaskIntoConstraints="NO" id="ai9-Xh-tLZ">
+                                    <rect key="frame" x="292" y="10" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="bwA-q3-6CF"/>
+                                        <constraint firstAttribute="width" constant="20" id="eZ6-n1-tCo"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeftArrowBlack" translatesAutoresizingMaskIntoConstraints="NO" id="Lpi-d9-91B">
+                                    <rect key="frame" x="8" y="10" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="BQK-sJ-c3E"/>
+                                        <constraint firstAttribute="width" constant="20" id="JKn-Aj-B6f"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -222,14 +236,18 @@
                                 <constraint firstItem="OKL-aD-sfg" firstAttribute="top" secondItem="gfL-js-w1u" secondAttribute="bottom" constant="65" id="cyZ-sV-Ibi"/>
                                 <constraint firstItem="gfL-js-w1u" firstAttribute="leading" secondItem="8TH-GN-66f" secondAttribute="trailing" constant="36.5" id="dXL-98-HzI"/>
                                 <constraint firstItem="ZF2-7L-2yU" firstAttribute="leading" secondItem="nxa-rd-4Jl" secondAttribute="leading" constant="18" id="em3-3b-1qh"/>
+                                <constraint firstAttribute="trailing" secondItem="ai9-Xh-tLZ" secondAttribute="trailing" constant="8" id="h0H-PZ-VQv"/>
                                 <constraint firstItem="qQW-AG-s40" firstAttribute="leading" secondItem="nxa-rd-4Jl" secondAttribute="leading" constant="17" id="ip4-iW-Y3H"/>
                                 <constraint firstItem="cAd-PP-K65" firstAttribute="top" secondItem="ZF2-7L-2yU" secondAttribute="bottom" constant="27" id="oM1-YT-GdQ"/>
                                 <constraint firstAttribute="height" constant="700" id="oSh-DP-gkR"/>
+                                <constraint firstItem="Lpi-d9-91B" firstAttribute="leading" secondItem="nxa-rd-4Jl" secondAttribute="leading" constant="8" id="pIm-u5-zUG"/>
                                 <constraint firstItem="8TH-GN-66f" firstAttribute="top" secondItem="nxa-rd-4Jl" secondAttribute="top" constant="38" id="q7H-Fd-ujh"/>
                                 <constraint firstItem="Vj4-c2-l25" firstAttribute="leading" secondItem="nxa-rd-4Jl" secondAttribute="leading" constant="17" id="rA3-C3-2u6"/>
                                 <constraint firstAttribute="trailing" secondItem="eLC-YQ-8TN" secondAttribute="trailing" constant="14" id="wbT-kL-2AO"/>
                                 <constraint firstItem="BNe-C2-axk" firstAttribute="leading" secondItem="nxa-rd-4Jl" secondAttribute="leading" constant="18" id="xgb-7t-lr1"/>
                                 <constraint firstItem="gfL-js-w1u" firstAttribute="top" secondItem="nxa-rd-4Jl" secondAttribute="top" constant="18" id="yHR-0x-Tn2"/>
+                                <constraint firstItem="Lpi-d9-91B" firstAttribute="top" secondItem="nxa-rd-4Jl" secondAttribute="top" constant="10" id="yN3-Sn-P2S"/>
+                                <constraint firstItem="ai9-Xh-tLZ" firstAttribute="top" secondItem="nxa-rd-4Jl" secondAttribute="top" constant="10" id="yUZ-sv-mbs"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -260,6 +278,8 @@
         </button>
     </objects>
     <resources>
+        <image name="LeftArrowBlack" width="10" height="20"/>
+        <image name="RightArrowBlack" width="10" height="20"/>
         <image name="atmTranslation" width="512" height="512"/>
         <image name="busTranslation" width="512" height="512"/>
         <image name="doctorTranslation" width="512" height="512"/>

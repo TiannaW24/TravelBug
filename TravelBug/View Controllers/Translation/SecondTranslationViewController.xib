@@ -90,11 +90,19 @@
                         <action selector="pronounceTransaltion:" destination="-1" eventType="touchUpInside" id="OUK-4O-A7s"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeftArrowBlack" translatesAutoresizingMaskIntoConstraints="NO" id="JS5-Ql-Kcz">
+                    <rect key="frame" x="8" y="10" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Cuk-lC-jBQ"/>
+                        <constraint firstAttribute="height" constant="20" id="JCy-9j-ACj"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CaU-iG-Je2" secondAttribute="trailing" constant="32" id="0bv-qj-iFZ"/>
                 <constraint firstItem="VlX-kK-3Em" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="GXZ-z2-LGg"/>
+                <constraint firstItem="JS5-Ql-Kcz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="HJd-E3-KOQ"/>
                 <constraint firstItem="CaU-iG-Je2" firstAttribute="top" secondItem="qBI-St-lAY" secondAttribute="bottom" constant="15" id="Hec-oY-dAl"/>
                 <constraint firstItem="PFt-Kt-O2a" firstAttribute="top" secondItem="jWf-We-sc5" secondAttribute="bottom" constant="6" id="HkN-zo-dSq"/>
                 <constraint firstItem="PFt-Kt-O2a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="KDo-8f-Flj"/>
@@ -111,6 +119,7 @@
                 <constraint firstItem="teo-fq-isb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="k3C-OD-ZAr"/>
                 <constraint firstItem="qBI-St-lAY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lfB-Kg-tcf"/>
                 <constraint firstItem="jWf-We-sc5" firstAttribute="top" secondItem="CaU-iG-Je2" secondAttribute="bottom" constant="6" id="pbc-MD-8Oi"/>
+                <constraint firstItem="JS5-Ql-Kcz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="x2g-rE-bJc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
@@ -120,6 +129,7 @@
         </view>
     </objects>
     <resources>
+        <image name="LeftArrowBlack" width="10" height="20"/>
         <image name="speakerTranslation" width="512" height="512"/>
     </resources>
 </document>

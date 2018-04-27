@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FirstTranslationViewController: UIViewController {
 
+    //Speech To Text
+    let speechSynthesizer = AVSpeechSynthesizer()
+    
     //Image View Text Fields
     @IBOutlet var busImageView: UIImageView!
     @IBOutlet var foodImageView: UIImageView!
@@ -47,6 +51,8 @@ class FirstTranslationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         //Tab Bar
         self.tabBarController?.tabBar.barTintColor = UIColor.black
@@ -189,17 +195,32 @@ class FirstTranslationViewController: UIViewController {
     //SPEAKER BUTTONS TAPPED
     
     @IBAction func translationOneSpeakerButtonTapped(_ sender: UIButton) {
-        //TODO
+        pronounceText(text: phraseOneTranslation.text!)
     }
     
     
     @IBAction func translationTwoSpeakerButtonTapped(_ sender: UIButton) {
-        //TODO
+        pronounceText(text: phraseTwoTranslation.text!)
     }
     
     
     @IBAction func translationThreeSpeakerButtonTapped(_ sender: UIButton) {
-        //TODO
+        pronounceText(text: phraseThreeTranslation.text!)
+    }
+    
+    func pronounceText(text: String) {
+        let whatToSay = AVSpeechUtterance(string: text)
+        whatToSay.voice = AVSpeechSynthesisVoice(language: applicationDelegate.outputLanguage)
+        
+        speechSynthesizer.speak(whatToSay)
+    }
+    
+    //Yandex Link Pressed
+    @IBAction func yandexPressed(_ sender: UIButton) {
+        if let url = URL(string: "https://translate.yandex.com/") {
+            UIApplication.shared.open(url, options: [:])
+        }
+        
     }
     
     /*
@@ -220,6 +241,19 @@ class FirstTranslationViewController: UIViewController {
         
         // Present the alert controller
         present(alertController, animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        /*
+         ---------------------------------------------------------------------
+         Force this view to be displayed first in Portrait device orientation.
+         However, the user can override this by manually rotating the device.
+         ---------------------------------------------------------------------
+         */
+        let portraitValue = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(portraitValue, forKey: "orientation")
+        UIViewController.attemptRotationToDeviceOrientation()
     }
 
 }

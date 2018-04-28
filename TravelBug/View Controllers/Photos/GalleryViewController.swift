@@ -32,6 +32,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Photo Cell", for: indexPath) as! PhotoCollectionViewCell
         
+        cell.photoImageView.contentMode = UIViewContentMode.scaleAspectFit
         let image = getImage(imageName: imageNames[row])
         cell.photoImageView.image = image
         cell.locationLabel.text = imageNames[row]

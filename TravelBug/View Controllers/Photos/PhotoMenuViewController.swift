@@ -22,8 +22,25 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = self.view.frame
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        self.view.addSubview(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
+        
+        //Buttons
+        takeAPhotoButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        takeAPhotoButton.tintColor = UIColor.white
+        savePhotoButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        savePhotoButton.tintColor = UIColor.white
+        galleryButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        galleryButton.tintColor = UIColor.white
+        
         previewImageView.contentMode = UIViewContentMode.scaleAspectFit
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func takeAPhotoButtonTapped(_ sender: UIButton) {
@@ -33,7 +50,12 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    @IBAction func savePhotoButton(_ sender: UIButton) {
+    @IBAction func savePhotoButtonTapped(_ sender: UIButton) {
+        if previewImageView.image == nil {
+            showAlertMessage(messageHeader: "No Picture!", messageBody: "Theres no picture to save! Use the Take a Photo button to take a picture.")
+            return
+        }
+        
         let image = previewImageView.image
         let name = "user-photo-\(applicationDelegate.dict_imageName_Image.count)"
         saveImage(imageName: name)
@@ -55,7 +77,6 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
     func saveImage(imageName: String){
         let fileManager = FileManager.default
         let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
-        print(imageName)
         let image = previewImageView.image!
         let data = UIImagePNGRepresentation(image)
         fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)

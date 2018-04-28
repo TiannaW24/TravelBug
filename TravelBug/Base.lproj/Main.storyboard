@@ -1355,7 +1355,7 @@
                                 </constraints>
                                 <state key="normal" title="Save Photo"/>
                                 <connections>
-                                    <action selector="savePhotoButton:" destination="Cgd-VL-jdc" eventType="touchUpInside" id="wUr-ri-FZW"/>
+                                    <action selector="savePhotoButtonTapped:" destination="Cgd-VL-jdc" eventType="touchUpInside" id="xAz-fS-9vy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boe-oG-zRj">
@@ -1403,7 +1403,7 @@
                     <connections>
                         <outlet property="galleryButton" destination="boe-oG-zRj" id="P8o-8B-atg"/>
                         <outlet property="previewImageView" destination="KmW-oJ-tfK" id="TAK-jb-aKq"/>
-                        <outlet property="savePhotoButton" destination="vAo-Jb-mcj" id="1WM-SF-Eb7"/>
+                        <outlet property="savePhotoButton" destination="vAo-Jb-mcj" id="r8Z-42-qzn"/>
                         <outlet property="takeAPhotoButton" destination="EWr-3b-dao" id="5Td-9a-fRH"/>
                         <segue destination="3hX-P9-EgQ" kind="show" identifier="Show Gallery" id="kGL-s5-7f3"/>
                     </connections>
@@ -1424,7 +1424,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uUk-e1-MeS">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>

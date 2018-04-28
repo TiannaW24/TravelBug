@@ -36,7 +36,7 @@ class TestViewController: UIViewController {
 
 
 
-//Add these import statements
+//Add these import statements to PhotoMenuViewController
 /*
  import Photos
  import MapKit
@@ -44,9 +44,11 @@ class TestViewController: UIViewController {
  import Contacts
  */
 
-
+//Add this code to PhotoMenuViewController
 //Paste this code into the delegate method under "previewImageView.image = ...": func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
 //When you take a photo (and the delegate method is called), it should print out the city, country, and state where the photo was taken to the Console Window.
+
+
 /*
  
  

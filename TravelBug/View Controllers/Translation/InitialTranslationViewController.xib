@@ -58,12 +58,21 @@
                         <constraint firstAttribute="width" constant="320" id="rjz-cD-1Ng"/>
                     </constraints>
                 </pickerView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RightArrowBlack" translatesAutoresizingMaskIntoConstraints="NO" id="BY7-6m-JJP">
+                    <rect key="frame" x="292" y="10" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="FlX-SU-MfI"/>
+                        <constraint firstAttribute="width" constant="20" id="Mv5-be-Obr"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="b6w-1Z-Lkl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="833-i8-4Ed"/>
                 <constraint firstItem="2UJ-fg-NHo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="96f-RR-8QJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BY7-6m-JJP" secondAttribute="trailing" constant="8" id="Lvx-gy-Gm8"/>
                 <constraint firstItem="2UJ-fg-NHo" firstAttribute="top" secondItem="PSF-x3-pgA" secondAttribute="bottom" constant="16" id="O9L-4B-Oq8"/>
                 <constraint firstItem="PSF-x3-pgA" firstAttribute="top" secondItem="t7B-1z-T27" secondAttribute="bottom" constant="16" id="OmE-eg-Mu9"/>
+                <constraint firstItem="BY7-6m-JJP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="QAZ-gS-gha"/>
                 <constraint firstItem="t7B-1z-T27" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y9o-bv-A6K"/>
                 <constraint firstItem="t7B-1z-T27" firstAttribute="top" secondItem="b6w-1Z-Lkl" secondAttribute="bottom" constant="8" id="bOr-fz-M3G"/>
                 <constraint firstItem="b6w-1Z-Lkl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dSQ-TR-B0d"/>
@@ -73,4 +82,7 @@
             <point key="canvasLocation" x="24" y="52"/>
         </view>
     </objects>
+    <resources>
+        <image name="RightArrowBlack" width="10" height="20"/>
+    </resources>
 </document>

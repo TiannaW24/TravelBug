@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var dict_CountryName_CountryData: NSMutableDictionary = NSMutableDictionary()
     var dict_ExpenseName_ExpenseData: NSMutableDictionary = NSMutableDictionary()
-    
     var dict_presetSayings_TranslationData: NSMutableDictionary = NSMutableDictionary()
+    var dict_imageName_Image: NSMutableDictionary = NSMutableDictionary()
     
     var primaryLanguage: String?
     var outputLanguage: String?
@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Add the plist filename to the document directory path to obtain an absolute path to the plist filename
         let plistFilePathInDocumentDirectory = documentDirectoryPath + "/Expenses.plist"
         
-        // Write the NSMutableDictionary to the CompaniesILike.plist file in the Document directory
+        // Write the NSMutableDictionary to the Exoenses.plist file in the Document directory
         dict_ExpenseName_ExpenseData.write(toFile: plistFilePathInDocumentDirectory, atomically: true)
     }
 }

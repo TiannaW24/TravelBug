@@ -56,5 +56,7 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>TravelBug requires use of your camera to take pictures!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>TravelBug requires permission to store photos on your device!</string>
 </dict>
 </plist>

@@ -15,6 +15,7 @@ class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /*
         let cameraView: CameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
         self.addChildViewController(cameraView)
         self.photosScrollView.addSubview(cameraView.view)
@@ -22,6 +23,9 @@ class PhotosViewController: UIViewController {
         
         //There will be three views
         self.photosScrollView.contentSize = CGSize(width: self.view.frame.size.width * 3, height: self.view.frame.size.height)
+         */
+        
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     //UI Elements
@@ -72,6 +73,8 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePickerController.dismiss(animated: true, completion: nil)
         previewImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+
     }
     
     func saveImage(imageName: String){

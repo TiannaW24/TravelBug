@@ -20,6 +20,23 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>TravelBug requires use of your camera to take pictures!</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>TravelBug requires monitoring your location!</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>TravelBug requires monitoring your location!</string>
+	<key>NSLocationUsageDescription</key>
+	<string>TravelBug requires monitoring your location!</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>TravelBug requires monitoring your location!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>TravelBug requires permission to store photos on your device!</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -31,8 +48,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -41,22 +56,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>TravelBug requires monitoring your location!</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>TravelBug requires monitoring your location!</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>TravelBug requires monitoring your location!</string>
-	<key>NSLocationUsageDescription</key>
-	<string>TravelBug requires monitoring your location!</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>TravelBug requires use of your camera to take pictures!</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>TravelBug requires permission to store photos on your device!</string>
 </dict>
 </plist>

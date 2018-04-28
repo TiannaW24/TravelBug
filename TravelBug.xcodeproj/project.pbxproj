@@ -21,6 +21,7 @@
 		5E52406F2093CBD000C04013 /* PhotoMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E52406E2093CBD000C04013 /* PhotoMenuViewController.swift */; };
 		5E5240712093CD2400C04013 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5240702093CD2400C04013 /* GalleryViewController.swift */; };
 		5E5240732093D1E000C04013 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5240722093D1E000C04013 /* PhotoCollectionViewCell.swift */; };
+		5E5240752094107400C04013 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E5240742094107400C04013 /* Photos.plist */; };
 		5EA3E2FE20640DF100D90946 /* ExpenseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */; };
 		5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */; };
 		5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */; };
@@ -77,6 +78,7 @@
 		5E52406E2093CBD000C04013 /* PhotoMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMenuViewController.swift; sourceTree = "<group>"; };
 		5E5240702093CD2400C04013 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		5E5240722093D1E000C04013 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E5240742094107400C04013 /* Photos.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		5EA3E2FD20640DF100D90946 /* ExpenseInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseInfoViewController.swift; sourceTree = "<group>"; };
 		5EA3E30120640E5C00D90946 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				5E207A2B208BB48000C3DC41 /* iOSDevCenters+GIF.swift */,
 				5EE339FF204592FF00189D4D /* Info.plist */,
 				5EC4D997206432BB0013AF16 /* Expenses.plist */,
+				5E5240742094107400C04013 /* Photos.plist */,
 				5444710520883F3C0065BF8B /* presetSayings.plist */,
 				5E207A2D208BB57200C3DC41 /* globeanimation.gif */,
 			);
@@ -360,6 +363,7 @@
 				5444710D20883F3C0065BF8B /* presetSayings.plist in Resources */,
 				5444711220883F3C0065BF8B /* SecondTranslationViewController.xib in Resources */,
 				5EC4D998206432BB0013AF16 /* Expenses.plist in Resources */,
+				5E5240752094107400C04013 /* Photos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

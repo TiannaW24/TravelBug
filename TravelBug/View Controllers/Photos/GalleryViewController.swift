@@ -20,6 +20,19 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Background
+        let bgImage = UIImage(named: "blue_purple_background")
+        let bgImageView = UIImageView()
+        bgImageView.frame = self.view.frame
+        bgImageView.image = bgImage
+        bgImageView.alpha = 0.5
+        /*
+        collectionView.addSubview(bgImageView)
+        collectionView.sendSubview(toBack: bgImageView)
+        */
+        
+        collectionView.backgroundView = bgImageView
+        
         imageNames = applicationDelegate.dict_imageName_Image.allKeys as! [String]
     }
     

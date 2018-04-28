@@ -78,7 +78,7 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
         let fileManager = FileManager.default
         let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
         let image = previewImageView.image!
-        let data = UIImagePNGRepresentation(image)
+        let data = UIImageJPEGRepresentation(image, 0.5)
         fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
     }
     

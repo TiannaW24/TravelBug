@@ -58,8 +58,9 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
         
         let image = previewImageView.image
         let name = "user-photo-\(applicationDelegate.dict_imageName_Image.count)"
-        saveImage(imageName: name)
+        
         applicationDelegate.dict_imageName_Image.setObject(image as Any, forKey: name as NSCopying)
+        saveImage(imageName: name)
         
         showAlertMessage(messageHeader: "Photo Saved!", messageBody: "Your photo has been saved! You can view it in the Gallery.")
         previewImageView.image = nil
@@ -75,6 +76,12 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
     }
     
     func saveImage(imageName: String){
+        /*
+        let defaults = UserDefaults.standard
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: applicationDelegate.dict_imageName_Image)
+        defaults.set(encodedData, forKey: "Photos")
+        */
+        
         let fileManager = FileManager.default
         let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
         let image = previewImageView.image!

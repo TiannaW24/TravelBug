@@ -26,11 +26,7 @@
 		5EA3E30420640ED100D90946 /* ExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */; };
 		5EA3E30620640FC800D90946 /* ExpenseSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E30520640FC800D90946 /* ExpenseSummaryViewController.swift */; };
 		5EC4D998206432BB0013AF16 /* Expenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EC4D997206432BB0013AF16 /* Expenses.plist */; };
-		5ED24302209368FE00C6594A /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED24301209368FE00C6594A /* PhotosViewController.swift */; };
-		5ED2430720936A9100C6594A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2430520936A9100C6594A /* CameraViewController.swift */; };
-		5ED2430820936A9100C6594A /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2430620936A9100C6594A /* CameraViewController.xib */; };
 		5ED2430A2093751200C6594A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED243092093751200C6594A /* AVFoundation.framework */; };
-		5ED2430C2093755C00C6594A /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2430B2093755C00C6594A /* CameraController.swift */; };
 		5ED2DC652063014C0042CF81 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2DC642063014C0042CF81 /* MoneyViewController.swift */; };
 		5ED2DC7F2063154C0042CF81 /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2DC7E2063154C0042CF81 /* CurrencyConverterViewController.swift */; };
 		5ED2DC8920633CB40042CF81 /* CurrenciesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2DC8820633CB40042CF81 /* CurrenciesTableViewController.swift */; };
@@ -86,11 +82,7 @@
 		5EA3E30320640ED100D90946 /* ExpenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewController.swift; sourceTree = "<group>"; };
 		5EA3E30520640FC800D90946 /* ExpenseSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSummaryViewController.swift; sourceTree = "<group>"; };
 		5EC4D997206432BB0013AF16 /* Expenses.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Expenses.plist; sourceTree = "<group>"; };
-		5ED24301209368FE00C6594A /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
-		5ED2430520936A9100C6594A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		5ED2430620936A9100C6594A /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		5ED243092093751200C6594A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		5ED2430B2093755C00C6594A /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		5ED2DC642063014C0042CF81 /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
 		5ED2DC7E2063154C0042CF81 /* CurrencyConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewController.swift; sourceTree = "<group>"; };
 		5ED2DC8820633CB40042CF81 /* CurrenciesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableViewController.swift; sourceTree = "<group>"; };
@@ -175,10 +167,6 @@
 		5ED243002093689E00C6594A /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				5ED24301209368FE00C6594A /* PhotosViewController.swift */,
-				5ED2430520936A9100C6594A /* CameraViewController.swift */,
-				5ED2430620936A9100C6594A /* CameraViewController.xib */,
-				5ED2430B2093755C00C6594A /* CameraController.swift */,
 				5E52406E2093CBD000C04013 /* PhotoMenuViewController.swift */,
 				5E5240702093CD2400C04013 /* GalleryViewController.swift */,
 				5E5240722093D1E000C04013 /* PhotoCollectionViewCell.swift */,
@@ -372,7 +360,6 @@
 				5444710D20883F3C0065BF8B /* presetSayings.plist in Resources */,
 				5444711220883F3C0065BF8B /* SecondTranslationViewController.xib in Resources */,
 				5EC4D998206432BB0013AF16 /* Expenses.plist in Resources */,
-				5ED2430820936A9100C6594A /* CameraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +386,6 @@
 			files = (
 				5EA3E30620640FC800D90946 /* ExpenseSummaryViewController.swift in Sources */,
 				5E5240732093D1E000C04013 /* PhotoCollectionViewCell.swift in Sources */,
-				5ED2430C2093755C00C6594A /* CameraController.swift in Sources */,
 				5E207A2C208BB48000C3DC41 /* iOSDevCenters+GIF.swift in Sources */,
 				5ED2DC8920633CB40042CF81 /* CurrenciesTableViewController.swift in Sources */,
 				5444710B20883F3C0065BF8B /* TranslationCenterViewController.swift in Sources */,
@@ -411,7 +397,6 @@
 				5444711120883F3C0065BF8B /* InitialTranslationViewController.swift in Sources */,
 				5EA3E30220640E5C00D90946 /* AddExpenseViewController.swift in Sources */,
 				5E5240712093CD2400C04013 /* GalleryViewController.swift in Sources */,
-				5ED2430720936A9100C6594A /* CameraViewController.swift in Sources */,
 				5EDDC7092064412F004C0DAB /* ExpenseListTableViewCell.swift in Sources */,
 				5E52406F2093CBD000C04013 /* PhotoMenuViewController.swift in Sources */,
 				5ED2DC7F2063154C0042CF81 /* CurrencyConverterViewController.swift in Sources */,
@@ -420,7 +405,6 @@
 				5444710E20883F3C0065BF8B /* FirstTranslationViewController.swift in Sources */,
 				B7DD255F2083EF2000B1FB93 /* CurrentLocationOnMapViewController.swift in Sources */,
 				5EE339F4204592FF00189D4D /* AppDelegate.swift in Sources */,
-				5ED24302209368FE00C6594A /* PhotosViewController.swift in Sources */,
 				B7DD25612083FAC800B1FB93 /* DirectionsViewController.swift in Sources */,
 				5ED2DC652063014C0042CF81 /* MoneyViewController.swift in Sources */,
 			);

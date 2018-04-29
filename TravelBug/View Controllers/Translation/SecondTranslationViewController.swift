@@ -113,12 +113,18 @@ class SecondTranslationViewController: UIViewController {
      */
     
     @IBAction func translateButtonPressed(_ sender: UIButton) {
+        //Lower the keyboard
         translateFromTextView.resignFirstResponder()
+        //get text to translate
         var toTranslate = translateFromTextView.text!
+        //remove whitespaces properly as done in other views
         toTranslate = toTranslate.trimmingCharacters(in: .whitespacesAndNewlines)
         toTranslate = toTranslate.replacingOccurrences(of: " ", with: "%20")
+        //Set the lang attribute for the api query
         let langAttribute = applicationDelegate.primaryLanguage! + "-" + applicationDelegate.outputLanguage!
+        //Set api request url
         let apiString = "https://translate.yandex.net/api/v1.5/tr.json/translate?lang=" + langAttribute + "&key=" + apiKey + "&text=" + toTranslate
+        //Trasnlate the input and set the text view to display it
         let translation = translateInput(apiString)
         translateToTextView.text = translation
     }
@@ -140,7 +146,7 @@ class SecondTranslationViewController: UIViewController {
         view.endEditing(true)
     }
     
-    //Yandex Link Pressed
+    //Yandex Link Pressed Load Yandex Trasnlate in Safari
     @IBAction func yandexPressed(_ sender: UIButton) {
         if let url = URL(string: "https://translate.yandex.com/") {
             UIApplication.shared.open(url, options: [:])
@@ -148,10 +154,12 @@ class SecondTranslationViewController: UIViewController {
         
     }
     
+    //Speaker button pressed
     @IBAction func pronounceTransaltion(_ sender: Any) {
         pronounceText(text: translateToTextView.text!)
     }
     
+    //Create an AV Speech Utterance for the transalted text and say it
     func pronounceText(text: String) {
         let whatToSay = AVSpeechUtterance(string: text)
         whatToSay.voice = AVSpeechSynthesisVoice(language: applicationDelegate.outputLanguage)

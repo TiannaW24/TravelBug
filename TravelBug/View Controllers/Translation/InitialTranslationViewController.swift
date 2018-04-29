@@ -24,12 +24,12 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
     // Obtain the object reference to the App Delegate object
     let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    var primaryLanguage: String = ""
-    var outputLanguage: String = ""
-    
+    //Structures to hold language data
     var dict_languageKeys_languageData: NSDictionary = NSDictionary()
     var languages = [languageStruct]()
     
+    
+    //Set up the api request
     let apiKey = "trnsl.1.1.20180418T190140Z.d89b8f4ad4a5d910.32872d8ea1451edc7d7df8e6a7153eab3b872f73"
     let apiRequest = "https://translate.yandex.net/api/v1.5/tr.json/getLangs?key=trnsl.1.1.20180418T190140Z.d89b8f4ad4a5d910.32872d8ea1451edc7d7df8e6a7153eab3b872f73&ui=en"
     
@@ -79,6 +79,7 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
         
     }
     
+    //Set up the data sources for both picker views
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
             applicationDelegate.primaryLanguage = languages[row].key
@@ -93,6 +94,7 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
         // Dispose of any resources that can be recreated.
     }
     
+    //Get all the languages supported by Yandex
     func getLanguages() {
         
         let url = URL(string: apiRequest)
@@ -122,9 +124,11 @@ class InitialTranslationViewController: UIViewController, UIPickerViewDelegate, 
                 let languagesData = jsonDataDictionary!["langs"] as! NSDictionary
                 dict_languageKeys_languageData = languagesData
                 let keys = languagesData.allKeys as! [String]
+                //Append languages ot list
                 for key in keys {
                     languages.append(languageStruct(key: key, lang: languagesData[key] as! String))
                 }
+                //Sort languages
                 languages = languages.sorted {$0.lang < $1.lang}
                 
             } catch let error as NSError {

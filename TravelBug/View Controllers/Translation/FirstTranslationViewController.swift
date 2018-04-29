@@ -37,6 +37,7 @@ class FirstTranslationViewController: UIViewController {
     @IBOutlet var phraseTwoSpeakerButton: UIButton!
     @IBOutlet var phraseThreeSpeakerButton: UIButton!
     
+    //View Outlets
     @IBOutlet var contentView: UIView!
     @IBOutlet var scrollView: UIScrollView!
     
@@ -117,8 +118,10 @@ class FirstTranslationViewController: UIViewController {
     }
     
     @objc func handleTapping(_ recognizer: UITapGestureRecognizer) {
+        //Get the insatnce of the image that was pressed
         let buttonPressed = presetButtons[Int(recognizer.name!)!]
         var key: String = ""
+        //Use a switch statement to get which image was pressed based on the name of the imageView
         switch buttonPressed {
         case busImageView:
             key = "Bus"
@@ -135,22 +138,91 @@ class FirstTranslationViewController: UIViewController {
         default:
             key = ""
         }
+        //Get the phrases associated with the selected icon to translate
         let phrases = applicationDelegate.dict_presetSayings_TranslationData[key] as! [String]
-        phraseOneLabel.text = phrases[0]
-        phraseTwoLabel.text = phrases[1]
-        phraseThreeLabel.text = phrases[2]
         
+        
+        
+        //If the primary language is not english translate the label languages
+        if(applicationDelegate.primaryLanguage != "en") {
+            phraseOneLabel.text = translatePhrase(phrases[0])
+            phraseTwoLabel.text = translatePhrase(phrases[1])
+            phraseThreeLabel.text = translatePhrase(phrases[2])
+        }
+        else {//Else just use the programmed labels
+            phraseOneLabel.text = phrases[0]
+            phraseTwoLabel.text = phrases[1]
+            phraseThreeLabel.text = phrases[2]
+        }
+        //Set the translations labels to the translated phrase
         phraseOneTranslation.text = translateInput(phrases[0])
         phraseTwoTranslation.text = translateInput(phrases[1])
         phraseThreeTranslation.text = translateInput(phrases[2])
     }
     
+    //Used to transalte the phrases to the output language
     func translateInput(_ phrase: String) -> String {
         
         var toTranslate = phrase
+        //Remove preceeding and trailing whitespaces
         toTranslate = toTranslate.trimmingCharacters(in: .whitespacesAndNewlines)
+        //Replaces spaces with url safe characters for the query
         toTranslate = toTranslate.replacingOccurrences(of: " ", with: "%20")
+        //Set up the lang attribute for the api query
         let langAttribute = "en-" + applicationDelegate.outputLanguage!
+        //Create the full api request url
+        let apiURL = "https://translate.yandex.net/api/v1.5/tr.json/translate?lang=" + langAttribute + "&key=" + apiKey + "&text=" + toTranslate
+        
+        let url = URL(string: apiURL)
+        // Declare jsonData as an optional of type Data
+        let jsonData: Data?
+        
+        do {
+            
+            //Try getting the JSON data from the URL and map it into virtual memory, if possible and safe.
+            jsonData = try Data(contentsOf: url!, options: NSData.ReadingOptions.mappedIfSafe)
+            
+        } catch {
+            return "Translation Failed"
+        }
+        
+        if let jsonDataFromApiUrl = jsonData {
+            
+            // The JSON data is successfully obtained from the API
+            
+            do {
+                /*
+                 JSONSerialization class is used to convert JSON and Foundation objects (e.g., NSDictionary) into each other.
+                 JSONSerialization class method jsonObject returns an NSDictionary object from the given JSON data.
+                 */
+                let jsonDataDictionary = try JSONSerialization.jsonObject(with: jsonDataFromApiUrl, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+                
+                let translation = jsonDataDictionary!["text"] as! NSArray
+                return translation[0] as! String
+                
+            } catch let error as NSError {
+                
+                showAlertMessage(messageHeader: "JSON Data", messageBody: "Error in JSON Data Serialization: \(error.localizedDescription)")
+                return "Translation Failed"
+            }
+            
+        } else {
+            showAlertMessage(messageHeader: "JSON Data", messageBody: "Unable to obtain the JSON data file!")
+        }
+        return "Translation Failed"
+    }
+    
+    //Used to translate the original phrases if needed
+    func translatePhrase(_ phrase: String) -> String {
+        
+        var toTranslate = phrase
+        //Remove preceeding and trailing whitespaces
+        toTranslate = toTranslate.trimmingCharacters(in: .whitespacesAndNewlines)
+        //Replaces spaces with url safe characters for the query
+        toTranslate = toTranslate.replacingOccurrences(of: " ", with: "%20")
+        //Set up the lang attribute for the api query
+        let langAttribute = "en-" + applicationDelegate.primaryLanguage!
+        //Create the full api request url
         let apiURL = "https://translate.yandex.net/api/v1.5/tr.json/translate?lang=" + langAttribute + "&key=" + apiKey + "&text=" + toTranslate
         
         let url = URL(string: apiURL)
@@ -209,13 +281,15 @@ class FirstTranslationViewController: UIViewController {
     }
     
     func pronounceText(text: String) {
+        //Create a Speech Utterance for the desired phrase
         let whatToSay = AVSpeechUtterance(string: text)
+        //Set the speech syntheziszer language
         whatToSay.voice = AVSpeechSynthesisVoice(language: applicationDelegate.outputLanguage)
-        
+        //Speak the phrase translated)
         speechSynthesizer.speak(whatToSay)
     }
     
-    //Yandex Link Pressed
+    //Yandex Link Pressed. Load yandex Translate in Safari
     @IBAction func yandexPressed(_ sender: UIButton) {
         if let url = URL(string: "https://translate.yandex.com/") {
             UIApplication.shared.open(url, options: [:])

@@ -15,6 +15,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     //Instance Variables
     var imageNames = [String]()
+    var imageNameToPass = ""
     let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -49,7 +50,6 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         //Set the cell elements
         cell.photoImageView.image = image
-        cell.locationLabel.text = imageNames[row]
         
         return cell
     }
@@ -77,6 +77,27 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         */
         
         return image
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let row = indexPath.row
+        
+        imageNameToPass = imageNames[row]
+        
+        performSegue(withIdentifier: "Photo Detail", sender: self)
+    }
+    
+    //Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        
+        if segue.identifier == "Photo Detail" {
+            
+            // Obtain the object reference of the destination view controller
+            let photoDetailViewController: PhotoDetailViewController = segue.destination as! PhotoDetailViewController
+            
+            // Pass the data object to the downstream view controller object
+            photoDetailViewController.imageNamePassed = imageNameToPass
+        }
     }
 
     override func didReceiveMemoryWarning() {

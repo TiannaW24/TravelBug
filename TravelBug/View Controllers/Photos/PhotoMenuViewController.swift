@@ -7,14 +7,18 @@
 //
 
 import UIKit
-
+import Photos
+import MapKit
+import Foundation
+import Contacts
 
 class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     //UI Elements
     @IBOutlet var previewImageView: UIImageView!
     @IBOutlet var takeAPhotoButton: UIButton!
-    @IBOutlet var savePhotoButton: UIButton!
+    @IBOutlet var savePhotoToTBButton: UIButton!
+    @IBOutlet var savePhotoToDeviceButton: UIButton!
     @IBOutlet var galleryButton: UIButton!
     
     //Instance variables
@@ -34,11 +38,13 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
         self.view.sendSubview(toBack: bgImageView)
         
         //Buttons
-        takeAPhotoButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        takeAPhotoButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
         takeAPhotoButton.tintColor = UIColor.white
-        savePhotoButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
-        savePhotoButton.tintColor = UIColor.white
-        galleryButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        savePhotoToTBButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
+        savePhotoToTBButton.tintColor = UIColor.white
+        savePhotoToDeviceButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
+        savePhotoToDeviceButton.tintColor = UIColor.white
+        galleryButton.titleLabel?.font = UIFont (name: "HelveticaNeue-Italic", size: 20)
         galleryButton.tintColor = UIColor.white
         
         previewImageView.contentMode = UIViewContentMode.scaleAspectFit
@@ -51,7 +57,7 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    @IBAction func savePhotoButtonTapped(_ sender: UIButton) {
+    @IBAction func savePhotoToTBButtonTapped(_ sender: UIButton) {
         if previewImageView.image == nil {
             showAlertMessage(messageHeader: "No Picture!", messageBody: "Theres no picture to save! Use the Take a Photo button to take a picture.")
             return
@@ -64,6 +70,21 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
         saveImage(imageName: name)
         
         showAlertMessage(messageHeader: "Photo Saved!", messageBody: "Your photo has been saved! You can view it in the Gallery.")
+    }
+    
+    
+    @IBAction func savePhotoToDeviceButtonTapped(_ sender: UIButton) {
+        if previewImageView.image == nil {
+            showAlertMessage(messageHeader: "No Picture!", messageBody: "Theres no picture to save! Use the Take a Photo button to take a picture.")
+            return
+        }
+        let image = previewImageView.image
+        
+        //Saving to camera roll
+        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+        
+        showAlertMessage(messageHeader: "Photo Saved!", messageBody: "Your photo was saved to your device's Photo Library.")
+        
         previewImageView.image = nil
     }
     
@@ -75,16 +96,50 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
         imagePickerController.dismiss(animated: true, completion: nil)
         previewImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         
-
+        /*
+        //Getting the location of the image
+        //Get the PHAsset from the photo int the imagePickerController delegate method
+        let photoTaken = info[UIImagePickerControllerPHAsset] as? PHAsset
+        
+        //The field ".location" in the PHAsset contains the location where the photo was taken.
+        //Other possible useful fields are .creationDate and .modificationDate to display the date when the photo was taken
+        let photoLocation = photoTaken?.location
+        
+        //Convert the CLLocation obtained from the PHAsset to coordinates
+        let photoCoords = photoLocation?.coordinate
+        let photoLat = photoCoords?.latitude
+        let photoLong = photoCoords?.longitude
+        
+        //Convert the CLLocation obtained from PHAsset to a city name (Possibly more useful in this context)
+        let geoCoder = CLGeocoder()
+        
+        //Set a variable to store  the postalAdress
+        var postalAddress: CNPostalAddress!
+        
+        //Use the reverseGeocodeLocation method with your CLLocation to obtain the postalAdress
+        geoCoder.reverseGeocodeLocation(photoLocation!) { placemarks, error in
+            if let e = error {
+                print(e)
+            } else {
+                //Create a placemark with from the CLLocation
+                let placeArray = placemarks
+                var placeMark: CLPlacemark!
+                placeMark = placeArray?[0]
+                
+                //Get the postalAddress from a field in the placeMark
+                postalAddress = placeMark.postalAddress!
+                print("NoError")
+            }
+        }
+        
+        //Prints out some address information
+        print(postalAddress.city)
+        print(postalAddress.country)
+        print(postalAddress.state)
+        */
     }
     
     func saveImage(imageName: String){
-        /*
-        let defaults = UserDefaults.standard
-        let encodedData = NSKeyedArchiver.archivedData(withRootObject: applicationDelegate.dict_imageName_Image)
-        defaults.set(encodedData, forKey: "Photos")
-        */
-        
         let fileManager = FileManager.default
         let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
         let image = previewImageView.image!

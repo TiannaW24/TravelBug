@@ -11,5 +11,4 @@ import UIKit
 class PhotoCollectionViewCell: UICollectionViewCell {
     //A Cell that will show an image and a location
     @IBOutlet var photoImageView: UIImageView!
-    @IBOutlet var locationLabel: UILabel!
 }

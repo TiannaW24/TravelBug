@@ -69,13 +69,6 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
             print("No image was found with the name \(imageName)!")
         }
         
-        /*
-        let defaults = UserDefaults.standard
-        let decoded  = defaults.object(forKey: "Photos") as! Data
-        let decodedDict = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! Dictionary<String, UIImage>
-        image = decodedDict[imageName]!
-        */
-        
         return image
     }
     

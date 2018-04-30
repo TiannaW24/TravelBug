@@ -51,9 +51,11 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
     }
 
     @IBAction func takeAPhotoButtonTapped(_ sender: UIButton) {
+        //Creation of a camera controller
         imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.sourceType = .camera
+        //Present the camera to the user
         present(imagePickerController, animated: true, completion: nil)
     }
     
@@ -66,6 +68,7 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
         let image = previewImageView.image
         let name = "user-photo-\(applicationDelegate.dict_imageName_Image.count)"
         
+        //Save to dictionary
         applicationDelegate.dict_imageName_Image.setObject(image as Any, forKey: name as NSCopying)
         saveImage(imageName: name)
         
@@ -94,56 +97,19 @@ class PhotoMenuViewController: UIViewController, UINavigationControllerDelegate,
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePickerController.dismiss(animated: true, completion: nil)
+        //Get the image the user has chosen
         previewImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        
-        /*
-        //Getting the location of the image
-        //Get the PHAsset from the photo int the imagePickerController delegate method
-        let photoTaken = info[UIImagePickerControllerPHAsset] as? PHAsset
-        
-        //The field ".location" in the PHAsset contains the location where the photo was taken.
-        //Other possible useful fields are .creationDate and .modificationDate to display the date when the photo was taken
-        let photoLocation = photoTaken?.location
-        
-        //Convert the CLLocation obtained from the PHAsset to coordinates
-        let photoCoords = photoLocation?.coordinate
-        let photoLat = photoCoords?.latitude
-        let photoLong = photoCoords?.longitude
-        
-        //Convert the CLLocation obtained from PHAsset to a city name (Possibly more useful in this context)
-        let geoCoder = CLGeocoder()
-        
-        //Set a variable to store  the postalAdress
-        var postalAddress: CNPostalAddress!
-        
-        //Use the reverseGeocodeLocation method with your CLLocation to obtain the postalAdress
-        geoCoder.reverseGeocodeLocation(photoLocation!) { placemarks, error in
-            if let e = error {
-                print(e)
-            } else {
-                //Create a placemark with from the CLLocation
-                let placeArray = placemarks
-                var placeMark: CLPlacemark!
-                placeMark = placeArray?[0]
-                
-                //Get the postalAddress from a field in the placeMark
-                postalAddress = placeMark.postalAddress!
-                print("NoError")
-            }
-        }
-        
-        //Prints out some address information
-        print(postalAddress.city)
-        print(postalAddress.country)
-        print(postalAddress.state)
-        */
     }
     
     func saveImage(imageName: String){
+        //Create a file manager
         let fileManager = FileManager.default
+        //Build the path for the image
         let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
         let image = previewImageView.image!
+        //Create a data object for the image
         let data = UIImageJPEGRepresentation(image, 0.5)
+        //Store the data at the created path
         fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
     }
     
